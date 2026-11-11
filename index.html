@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cooperativa Marco Polo - rutas, horarios, servicios y compra de boletos.">
+  <meta name="description" content="Cooperativa de Transporte Marco Polo, Sangolquí: 4 rutas con frecuencias desde 8 minutos hacia La Marín y Cusubamba. Anticipa tu viaje por WhatsApp 0979 212 249.">
   <meta name="theme-color" content="#0057b8">
   <title>Cooperativa Marco Polo | Viaja con nosotros</title>
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="Cooperativa Marco Polo, transporte Sangolquí, bus Cusubamba, Jatumpungo, Loreto, Cashapamba, San Fernando, La Marín, horarios bus Pichincha">
+  <meta name="keywords" content="Cooperativa Marco Polo, transporte Sangolquí, bus Cusubamba, Jatumpungo, Loreto, San Fernando, La Marín, Pifo, Santa Rosa de Cusubamba, horarios bus Pichincha, bus Sangolquí La Marín">
   <link rel="canonical" href="https://m4rc090101979-lgtm.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cooperativa Marco Polo | Viaja con nosotros">
-  <meta property="og:description" content="Rutas, horarios, tarifas y compra de boletos. 47 años conectando destinos en Pichincha.">
+  <meta property="og:description" content="4 rutas, frecuencias desde 8 minutos y atención todos los días. 47 años conectando Sangolquí con Quito y Cusubamba.">
   <meta property="og:url" content="https://m4rc090101979-lgtm.github.io/">
-  <meta property="og:image" content="https://m4rc090101979-lgtm.github.io/poster-marco-polo.webp">
+  <meta property="og:image" content="https://m4rc090101979-lgtm.github.io/og-marco-polo.jpg">
   <meta property="og:locale" content="es_EC">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Cooperativa Marco Polo",
-    "description": "Cooperativa de transporte de pasajeros. Rutas Jatumpungo, Loreto, Sangolquí - Cusubamba y San Fernando - La Marín.",
+    "description": "Cooperativa de transporte de pasajeros. Rutas Loreto, Jatumpungo y San Fernando – Sangolquí – La Marín, y Sangolquí – Pifo – Santa Rosa de Cusubamba.",
     "url": "https://m4rc090101979-lgtm.github.io/",
-    "image": "https://m4rc090101979-lgtm.github.io/poster-marco-polo.webp",
+    "image": "https://m4rc090101979-lgtm.github.io/og-marco-polo.jpg",
     "telephone": "+593979212249",
     "foundingDate": "1979-11-21",
     "address": {
@@ -335,13 +335,62 @@
     .qr-badge{display:inline-block;background:#eaf4ff;color:var(--blue);font-weight:900;border-radius:999px;padding:6px 12px;font-size:.8rem}
     @media (max-width:760px){.qr-grid{grid-template-columns:1fr}}
     .menu{gap:18px;font-size:.95rem}
+    /* ===== v6: contenido real ===== */
+    .hero-card{transform:rotate(1.2deg);max-width:470px;justify-self:center}
+    .hero-card img{aspect-ratio:4/4.4;object-position:50% 62%}
+    .hero-photo-note{font-size:.78rem;color:var(--muted);font-weight:700;padding:0 14px 8px}
+    .about-image img{aspect-ratio:4/4.6;width:100%;object-fit:cover;object-position:50% 55%}
+    .route-intro.deep{background:linear-gradient(145deg,#002b63,#0a5fb4)}
+    .stops{display:flex;flex-wrap:wrap;align-items:center;gap:0;margin:16px 0 18px;font-weight:850}
+    .stops span{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);padding:7px 12px;border-radius:999px}
+    .stops span:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px rgba(255,255,255,.3)}
+    .stops span:not(:last-child):after{content:"";display:inline-block;width:22px;height:3px;background:rgba(255,255,255,.55);margin:0 -14px 0 10px;border-radius:2px}
+    .stops span+span{margin-left:12px}
+    .warning a{text-decoration:underline}
+    .photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:26px}
+    .photo-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,50,110,.1);display:flex;flex-direction:column;transition:.25s}
+    .photo-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .photo-card img{width:100%;aspect-ratio:4/4.3;object-fit:cover}
+    .photo-body{padding:18px 20px 22px}
+    .photo-tag{display:inline-block;background:#eaf4ff;color:var(--blue);font-weight:850;font-size:.78rem;border-radius:999px;padding:5px 10px}
+    .photo-card h3{margin:10px 0 6px;color:var(--blue-deep);font-size:1.2rem;line-height:1.2}
+    .photo-card p{margin:0;color:var(--muted);font-size:.92rem}
+    .qr-grid{grid-template-columns:repeat(4,1fr);max-width:1200px;gap:18px}
+    .qr-item{padding:22px 18px}
+    .qr-item .qr-img{width:180px;height:180px}
+    .qr-item h3{font-size:1.15rem}
+    .qr-item .btn{padding:10px 12px;font-size:.85rem}
+    .bz-status{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:8px 13px;border-radius:999px;font-weight:850;margin-bottom:16px}
+    .bz-status i{width:11px;height:11px;border-radius:50%;background:#ccc}
+    .bz-status.open i{background:#7dffb0;box-shadow:0 0 0 4px rgba(125,255,176,.25)}
+    .bz-status.closed i{background:#ffd21c;box-shadow:0 0 0 4px rgba(255,210,28,.25)}
+    .bz-hours{font-size:2.1rem;font-weight:950;line-height:1.05;margin:0 0 10px;color:#fff!important}
+    .bz-hours small{display:block;font-size:.95rem;font-weight:700;color:#d6ffe6;margin-top:4px}
+    .bz-small{font-size:.88rem}
+    .bz-911{margin-top:16px;background:rgba(0,0,0,.18);border-radius:14px;padding:12px 14px;font-weight:700}
+    .bz-step{font-weight:950;color:var(--blue);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+    .bz-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .bz-label{display:grid;gap:6px;font-weight:800;color:var(--muted);font-size:.88rem}
+    .bz-err{margin:0;background:#ffe9ec;color:#9b0025;border-radius:12px;padding:10px 13px;font-weight:800}
+    .buzon-form .chip{padding:8px 12px}
+    .chip[data-v="Denuncia"].on{background:#c8102e;border-color:#c8102e}
+    [hidden]{display:none!important}
+    .bz-ok{display:flex;align-items:center}
+    .bz-ok-card{width:100%}
+    .bz-ok-card{max-width:620px;margin:auto;text-align:center;background:var(--bg);border:2px dashed #b9d3ee;border-radius:28px;padding:30px 24px}
+    .bz-ok-icon{font-size:2.6rem}
+    .bz-ok-card h3{margin:6px 0;color:var(--blue-deep);font-size:1.6rem}
+    .bz-ok-card p{color:var(--muted);margin:6px 0}
+    .bz-folio{font-size:clamp(1.5rem,5vw,2.3rem);font-weight:950;color:var(--blue);letter-spacing:.04em;background:#fff;border-radius:16px;padding:10px 16px;display:inline-block;margin:4px 0 8px}
+    @media (max-width:1080px){.photo-grid,.qr-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:620px){.photo-grid,.qr-grid,.bz-row{grid-template-columns:1fr}.hero-card{transform:none}.bz-hours{font-size:1.8rem}}
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container">
       <span>Cooperativa Marco Polo · Fundada el 21 de noviembre de 1979</span>
-      <a href="https://wa.me/593979212249" target="_blank" rel="noopener">WhatsApp: +593 979212249</a>
+      <a href="https://wa.me/593979212249" target="_blank" rel="noopener">📲 Anticipa tu viaje: +593 0979 212 249</a>
     </div>
   </div>
 
@@ -356,11 +405,11 @@
         <a href="#nosotros">Nosotros</a>
         <a href="#rutas">Rutas</a>
         <a href="#mision">Misión</a>
-        <a href="#equipo">Equipo</a>
+        <a href="#servicios">Atención</a>
         <a href="https://m4rc090101979-lgtm.github.io/tarifas/" target="_blank" rel="noopener">Tarifas</a>
         <a href="#buzon">Buzón</a>
         <a href="#contacto">Contacto</a>
-        <a class="nav-cta" href="#contacto">Comprar boleto</a>
+        <a class="nav-cta" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje." target="_blank" rel="noopener">Anticipa tu viaje</a>
       </nav>
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
     </div>
@@ -372,15 +421,15 @@
         <div>
           <div class="eyebrow">🚌 47 años conectando destinos</div>
           <h1>Tu destino,<br><span>nuestra misión.</span></h1>
-          <p>Viaja con Cooperativa Marco Polo con comodidad, seguridad y confianza. Consulta nuestras 4 rutas, horarios y prepara tu salida con anticipación.</p>
+          <p>Viaja con Cooperativa Marco Polo con comodidad, seguridad y confianza. Cuatro rutas desde Loreto, Jatumpungo, San Fernando y Sangolquí, con unidades cada 8 a 15 minutos desde las 05:00.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#rutas">Ver rutas y horarios →</a>
-            <a class="btn btn-ghost" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20consultar%20un%20boleto." target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            <a class="btn btn-ghost" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje." target="_blank" rel="noopener">💬 Anticipa tu viaje</a>
             <a class="btn btn-ghost" href="https://m4rc090101979-lgtm.github.io/tarifas/" target="_blank" rel="noopener">💲 Consulta tu tarifa</a>
           </div>
         </div>
         <div class="hero-card">
-          <img src="poster-marco-polo.webp" alt="Promoción de rutas y servicios de Cooperativa Marco Polo">
+          <img src="bus-portada.webp" alt="Bus de la Cooperativa Marco Polo, unidad PAE-1113" fetchpriority="high">
           <div class="hero-badge"><span>Comodidad · Seguridad · Confianza</span><strong>47 años</strong></div>
         </div>
       </div>
@@ -388,17 +437,18 @@
 
     <div class="container quick">
       <div class="quick-grid">
-        <div class="quick-item"><b>🗺️ 4 rutas principales</b><span>Consulta recorridos y horarios actualizados.</span></div>
-        <div class="quick-item"><b>⏱️ Salidas programadas</b><span>Planifica tu viaje y anticipa tu salida.</span></div>
-        <div class="quick-item"><b>🛡️ Viaja seguro</b><span>Servicio pensado para tu tranquilidad.</span></div>
-        <div class="quick-item"><b>📶 Wi‑Fi a bordo</b><span>Conectividad durante tu viaje.</span></div>
+        <div class="quick-item"><b>🗺️ 4 rutas diarias</b><span>Loreto, Jatumpungo y San Fernando a La Marín; Sangolquí a Cusubamba.</span></div>
+        <div class="quick-item"><b>⏱️ Cada 8 a 15 minutos</b><span>Servicio desde las 04:00 y 05:00, todos los días.</span></div>
+        <div class="quick-item"><b>🖥️ Despacho en línea</b><span>Monitoreamos las salidas para cumplir la frecuencia.</span></div>
+        <div class="quick-item"><b>📲 Anticipa tu viaje</b><span>WhatsApp <a href="https://wa.me/593979212249" target="_blank" rel="noopener"><b style="display:inline">0979 212 249</b></a></span></div>
       </div>
+</div>
     </div>
 
     <section id="nosotros">
       <div class="container about">
         <div class="about-image">
-          <img src="poster-marco-polo.webp" alt="Cooperativa Marco Polo">
+          <img src="bus-frente.webp" alt="Unidad de la Cooperativa Marco Polo en Sangolquí" loading="lazy">
           <div class="experience"><strong>47 años</strong> de experiencia</div>
         </div>
         <div class="about-copy">
@@ -408,10 +458,10 @@
           <div class="checks">
             <div class="check"><i>✓</i> Unidades modernas y equipadas</div>
             <div class="check"><i>✓</i> Atención personalizada</div>
-            <div class="check"><i>✓</i> Salidas programadas</div>
-            <div class="check"><i>✓</i> Información clara de horarios</div>
+            <div class="check"><i>✓</i> Despacho y monitoreo en línea</div>
+            <div class="check"><i>✓</i> Buzón de sugerencias y denuncias</div>
           </div>
-          <a class="btn btn-primary" href="#contacto">Quiero información</a>
+          <a class="btn btn-primary" href="#rutas">Ver rutas y frecuencias</a>
         </div>
       </div>
     </section>
@@ -457,14 +507,14 @@
         </div>
         <div class="stats">
           <div class="stat reveal"><strong data-count="47">0</strong><span>años de servicio</span></div>
-          <div class="stat reveal"><strong data-count="54">0</strong><span>unidades autorizadas · ¡y creciendo! 📈</span></div>
+          <div class="stat reveal"><strong data-count="51">0</strong><span>unidades en servicio</span></div>
           <div class="stat reveal"><strong data-count="4">0</strong><span>rutas en operación</span></div>
           <div class="stat reveal"><strong data-count="1979">0</strong><span>año de fundación</span></div>
         </div>
         <div class="team-grid">
           <article class="team-card reveal"><div class="ti">🏛️</div><h3>Asamblea y Consejos</h3><p>La Asamblea General, el Consejo de Administración y el Consejo de Vigilancia toman las decisiones de forma democrática y transparente.</p></article>
           <article class="team-card reveal"><div class="ti">📋</div><h3>Gerencia</h3><p>Planifica, organiza y controla la operación diaria, el cumplimiento normativo y la modernización de la cooperativa.</p></article>
-          <article class="team-card reveal"><div class="ti">🧑‍🤝‍🧑</div><h3>Socios</h3><p>Nuestras 54 unidades autorizadas pertenecen a socios comprometidos con la calidad del servicio y el crecimiento de la cooperativa. ¡Seguimos creciendo!</p></article>
+          <article class="team-card reveal"><div class="ti">🧑‍🤝‍🧑</div><h3>Socios</h3><p>Nuestras 51 unidades pertenecen a socios comprometidos con la calidad del servicio y el crecimiento de la cooperativa.</p></article>
           <article class="team-card reveal"><div class="ti">🚍</div><h3>Conductores y ayudantes</h3><p>Personal capacitado en normativa ANT, conducción segura y buen trato al usuario.</p></article>
           <article class="team-card reveal"><div class="ti">🕒</div><h3>Despacho</h3><p>Controla las salidas en secuencia, sin favoritismos, para garantizar frecuencias puntuales en cada ruta.</p></article>
           <article class="team-card reveal"><div class="ti">💬</div><h3>Atención al usuario</h3><p>Escuchamos tus consultas, sugerencias y reclamos para mejorar cada día.</p></article>
@@ -477,96 +527,83 @@
       <div class="container">
         <div class="section-head">
           <div class="section-kicker">Planifica tu viaje</div>
-          <h2>Rutas y horarios</h2>
-          <p>Selecciona una ruta para consultar sus horarios. Para la Ruta 3 recuerda anticipar tu salida 15 minutos antes desde el Colegio La Inmaculada.</p>
+          <h2>Rutas y frecuencias</h2>
+          <p>Operamos 4 rutas todos los días. Selecciona una para ver su recorrido, la primera salida y cada cuánto pasa una unidad.</p>
         </div>
 
         <div class="route-tabs">
-          <button class="route-tab active" data-route="r1">Ruta 1 · Jatumpungo ↔ Selva Alegre</button>
-          <button class="route-tab" data-route="r2">Ruta 2 · Cashapamba ↔ Loreto</button>
-          <button class="route-tab" data-route="r3">Ruta 3 · Sangolquí ↔ Cusubamba</button>
-          <button class="route-tab" data-route="r4">Ruta 4 · San Fernando ↔ La Marín</button>
+          <button class="route-tab active" data-route="r1">A · Loreto – Sangolquí – La Marín</button>
+          <button class="route-tab" data-route="r2">B · Jatumpungo – Sangolquí – La Marín</button>
+          <button class="route-tab" data-route="r3">C · San Fernando – Sangolquí – La Marín</button>
+          <button class="route-tab" data-route="r4">D · Sangolquí – Pifo – Cusubamba</button>
         </div>
 
         <div class="route-panel active" id="r1">
           <div class="route-intro">
-            <div class="route-num">Ruta 1</div>
-            <h3>Jatumpungo ↔ Selva Alegre</h3>
-            <p>Consulta las salidas programadas para organizar tu recorrido.</p>
-            <span class="route-pill">🚌 Salimos de cada parada</span>
-            <span class="route-pill">🛡️ Viaja seguro</span>
-            <span class="route-pill">📶 Wi‑Fi a bordo</span>
+            <div class="route-num">Ruta A</div>
+            <h3>Loreto – Sangolquí – La Marín</h3>
+            <div class="stops"><span>Loreto</span><span>Sangolquí</span><span>La Marín</span></div>
+            <span class="route-pill">🕔 Desde las 05:00</span>
+            <span class="route-pill">⚡ Cada 8 min en hora pico</span>
           </div>
           <div class="schedule">
-            <div class="schedule-head">
-              <h4>Horarios</h4><span class="schedule-note">Servicio regular</span>
-            </div>
+            <div class="schedule-head"><h4>Horario y frecuencia</h4><span class="schedule-note">Todos los días</span></div>
             <div class="times">
-              <div class="station"><h5>JATUMPUNGO</h5><div class="time-list"><span class="time">05:00</span><span class="time">05:23</span><span class="time">06:00</span></div></div>
-              <div class="station"><h5>SELVA ALEGRE</h5><div class="time-list"><span class="time">05:05</span><span class="time">05:15</span><span class="time">06:00</span></div></div>
+              <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">05:00</span></div></div>
+              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Hora pico: cada 8 min</span><span class="time">Hora valle: cada 12 min</span></div></div>
             </div>
           </div>
         </div>
 
         <div class="route-panel" id="r2">
           <div class="route-intro green">
-            <div class="route-num">Ruta 2</div>
-            <h3>Cashapamba ↔ Loreto</h3>
-            <p>Revisa las diferentes alternativas de salida y regreso.</p>
-            <span class="route-pill">🚌 Salimos de cada parada</span>
-            <span class="route-pill">🛡️ Viaja seguro</span>
-            <span class="route-pill">📶 Wi‑Fi a bordo</span>
+            <div class="route-num">Ruta B</div>
+            <h3>Jatumpungo – Sangolquí – La Marín</h3>
+            <div class="stops"><span>Jatumpungo</span><span>Sangolquí</span><span>La Marín</span></div>
+            <span class="route-pill">🕔 Desde las 05:03</span>
+            <span class="route-pill">🔁 Cada 12 min todo el día</span>
           </div>
           <div class="schedule">
-            <div class="schedule-head">
-              <h4>Horarios</h4><span class="schedule-note">Servicio regular</span>
-            </div>
+            <div class="schedule-head"><h4>Horario y frecuencia</h4><span class="schedule-note">Todos los días</span></div>
             <div class="times">
-              <div class="station"><h5>CASHAPAMBA</h5><div class="time-list"><span class="time">04:54</span><span class="time">05:05</span><span class="time">05:50</span></div></div>
-              <div class="station"><h5>LORETO</h5><div class="time-list"><span class="time">05:00</span><span class="time">05:25</span><span class="time">05:50</span><span class="time">06:06</span><span class="time">13:00</span></div></div>
+              <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">05:03</span></div></div>
+              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Todo el día: cada 12 min</span></div></div>
             </div>
           </div>
         </div>
 
         <div class="route-panel" id="r3">
           <div class="route-intro pink">
-            <div class="route-num">Ruta 3</div>
-            <h3>Sangolquí ↔ Cusubamba</h3>
-            <p>Ideal para organizar con anticipación tu salida y regreso.</p>
-            <span class="route-pill">🚌 Salimos de cada parada</span>
-            <span class="route-pill">🛡️ Viaja seguro</span>
-            <span class="route-pill">📶 Wi‑Fi a bordo</span>
+            <div class="route-num">Ruta C</div>
+            <h3>San Fernando – Sangolquí – La Marín</h3>
+            <div class="stops"><span>San Fernando</span><span>Sangolquí</span><span>La Marín</span></div>
+            <span class="route-pill">🕔 Desde las 05:00</span>
+            <span class="route-pill">🔁 Cada 15 min todo el día</span>
           </div>
           <div class="schedule">
-            <div class="schedule-head">
-              <h4>Horarios</h4><span class="schedule-note">Lunes a sábado · según programación</span>
-            </div>
+            <div class="schedule-head"><h4>Horario y frecuencia</h4><span class="schedule-note">Todos los días</span></div>
             <div class="times">
-              <div class="station"><h5>SANGOLQUÍ · Colegio La Inmaculada</h5><div class="time-list"><span class="time">04:00</span><span class="time">18:30</span></div></div>
-              <div class="station"><h5>CUSUBAMBA · Lunes a sábado</h5><div class="time-list"><span class="time">20:00</span><span class="time">05:10</span><span class="time">05:30</span></div></div>
+              <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">05:00</span></div></div>
+              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Todo el día: cada 15 min</span></div></div>
             </div>
-            <div class="warning">⏰ Anticipa tu salida <strong>15 minutos antes</strong> desde el Colegio La Inmaculada.</div>
           </div>
         </div>
 
         <div class="route-panel" id="r4">
-          <div class="route-intro">
-            <div class="route-num">Ruta 4</div>
-            <h3>San Fernando ↔ La Marín</h3>
-            <p>La operación desde San Fernando inicia a las 05:00. Consulta los demás horarios de la ruta.</p>
-            <span class="route-pill">🚌 Servicio de transporte</span>
-            <span class="route-pill">🛡️ Viaja seguro</span>
-            <span class="route-pill">📍 San Fernando ↔ La Marín</span>
+          <div class="route-intro deep">
+            <div class="route-num">Ruta D</div>
+            <h3>Sangolquí – Pifo – Santa Rosa de Cusubamba</h3>
+            <div class="stops"><span>Sangolquí</span><span>Pifo</span><span>Sta. Rosa de Cusubamba</span></div>
+            <span class="route-pill">🕓 Ida desde las 04:00</span>
+            <span class="route-pill">🕔 Retorno desde las 05:00</span>
           </div>
           <div class="schedule">
-            <div class="schedule-head">
-              <h4>Horarios</h4><span class="schedule-note">Inicio de operaciones: 05:00</span>
-            </div>
+            <div class="schedule-head"><h4>Horario</h4><span class="schedule-note">Ida y retorno</span></div>
             <div class="times">
-              <div class="station"><h5>SAN FERNANDO</h5><div class="time-list"><span class="time">05:00</span></div></div>
-              <div class="station"><h5>LA MARÍN</h5><div class="time-list"><span class="time">Horario por confirmar</span></div></div>
+              <div class="station"><h5>IDA · SANGOLQUÍ → PIFO → CUSUBAMBA</h5><div class="time-list"><span class="time">Desde las 04:00</span></div></div>
+              <div class="station"><h5>RETORNO · CUSUBAMBA → PIFO → SANGOLQUÍ</h5><div class="time-list"><span class="time">Desde las 05:00</span></div></div>
             </div>
-            <div class="warning">⏰ San Fernando inicia operaciones desde las <strong>05:00</strong>. Los demás horarios y los de regreso desde La Marín se publicarán próximamente.</div>
+            <div class="warning">📲 Para esta ruta, anticipa tu viaje en nuestro WhatsApp <a href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje%20a%20Cusubamba." target="_blank" rel="noopener"><b>0979 212 249</b></a>.</div>
           </div>
         </div>
       </div>
@@ -575,17 +612,32 @@
     <section id="servicios">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Más que un viaje</div>
-          <h2>Servicios para viajar mejor</h2>
-          <p>Información clara, atención cercana y una experiencia diseñada para nuestros pasajeros.</p>
+          <div class="section-kicker">Así trabajamos</div>
+          <h2>Atención real, todos los días</h2>
+          <p>Nuestra oficina en Cashapamba trabaja para el usuario, para la comunidad y para nuestros socios.</p>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card reveal">
+            <img src="monitoreo-despacho.webp" alt="Personal de la cooperativa en el puesto de monitoreo y despacho" loading="lazy" style="object-position:50% 40%">
+            <div class="photo-body"><span class="photo-tag">🖥️ En beneficio del usuario</span><h3>Monitoreo y despacho en línea</h3><p>Controlamos las salidas y la frecuencia de cada ruta en tiempo real, para que la unidad pase cuando debe pasar.</p></div>
+          </article>
+          <article class="photo-card reveal">
+            <img src="atencion-personalizada.webp" alt="Atención personalizada en la oficina de la Cooperativa Marco Polo" loading="lazy" style="object-position:50% 45%">
+            <div class="photo-body"><span class="photo-tag">🤝 En nuestra oficina</span><h3>Atención personalizada</h3><p>Te ayudamos con rutas, horarios, objetos perdidos y cualquier trámite con la cooperativa.</p></div>
+          </article>
+          <article class="photo-card reveal">
+            <img src="atencion-comunidad.webp" alt="Atención a la comunidad en la sede de la cooperativa" loading="lazy" style="object-position:50% 42%">
+            <div class="photo-body"><span class="photo-tag">🏘️ Puertas abiertas</span><h3>Atención a la comunidad</h3><p>Recibimos a vecinos, autoridades e instituciones. La cooperativa es parte de la comunidad a la que sirve.</p></div>
+          </article>
+          <article class="photo-card reveal">
+            <img src="insumos-socios.webp" alt="Lubricantes, llantas, baterías e insumos para las unidades de los socios" loading="lazy" style="object-position:50% 55%">
+            <div class="photo-body"><span class="photo-tag">🛢️ Solo para socios</span><h3>Insumos para socios</h3><p>Lubricantes, llantas, baterías, filtros y repuestos para mantener las unidades en buen estado. Consulta disponibilidad en la oficina.</p></div>
+          </article>
         </div>
         <div class="services-grid">
-          <article class="service"><div class="service-icon">🚌</div><h3>Unidades modernas</h3><p>Vehículos equipados para ofrecer una experiencia cómoda durante el recorrido.</p></article>
-          <article class="service"><div class="service-icon">🛡️</div><h3>Seguridad</h3><p>Priorizamos un viaje responsable y confiable en cada salida.</p></article>
-          
-          <article class="service"><div class="service-icon">💲</div><h3>Tarifas oficiales</h3><p>Consulta al instante el valor de tu pasaje según la Resolución 020-DIR-2026-ANT. <a href="https://m4rc090101979-lgtm.github.io/tarifas/" target="_blank" rel="noopener"><b>Consultar tarifa →</b></a></p></article>
-          <article class="service"><div class="service-icon">🎫</div><h3>Compra de boletos</h3><p>Consulta horarios y solicita tu boleto de forma rápida mediante WhatsApp.</p></article>
-          <article class="service"><div class="service-icon">🤝</div><h3>Atención personalizada</h3><p>Estamos para ayudarte a elegir tu ruta y resolver tus consultas.</p></article>
+          <article class="service"><div class="service-icon">🛡️</div><h3>Viaja seguro</h3><p>Conductores capacitados y unidades con mantenimiento al día.</p></article>
+          <article class="service"><div class="service-icon">💲</div><h3>Tarifas oficiales</h3><p>Consulta el valor de tu pasaje según la Resolución 020-DIR-2026-ANT. <a href="https://m4rc090101979-lgtm.github.io/tarifas/" target="_blank" rel="noopener"><b>Consultar tarifa →</b></a></p></article>
+          <article class="service"><div class="service-icon">📲</div><h3>Anticipa tu viaje</h3><p>Escríbenos a nuestro WhatsApp <b>0979 212 249</b> y planifica tu salida con anticipación.</p></article>
         </div>
       </div>
     </section>
@@ -593,11 +645,11 @@
     <div class="container cta">
       <div class="cta-box">
         <div class="cta-info">
-          <h2>¿Listo para viajar?</h2>
-          <p>Consulta disponibilidad, horarios y compra tu boleto directamente con nosotros.</p>
-          <div class="phone">+593 979 212 249</div>
+          <h2>Anticipa tu viaje</h2>
+          <p>Consulta rutas, frecuencias y planifica tu salida en nuestro WhatsApp.</p>
+          <div class="phone">+593 0979 212 249</div>
         </div>
-        <a class="btn btn-primary" href="https://wa.me/593979212249?text=Hola%20Cooperativa%20Marco%20Polo%2C%20quiero%20comprar%20un%20boleto." target="_blank" rel="noopener">Comprar por WhatsApp →</a>
+        <a class="btn btn-primary" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje." target="_blank" rel="noopener">💬 Escribir por WhatsApp →</a>
       </div>
     </div>
 
@@ -606,26 +658,46 @@
         <div class="section-head reveal">
           <div class="section-kicker">Escanea y comparte</div>
           <h2>Llévanos en tu celular</h2>
-          <p style="color:#5a3a00">Apunta la cámara de tu celular al código y accede al instante. También puedes descargarlos para imprimir o compartir.</p>
+          <p style="color:#5a3a00">Apunta la cámara de tu celular al código. Puedes descargarlos para imprimirlos en las unidades, la oficina o las paradas.</p>
         </div>
         <div class="qr-grid">
           <div class="qr-item reveal">
             <span class="qr-badge">🌐 Página oficial</span>
-            <div class="qr-img" id="qrSitio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#000" d="M2 2.5h7m2 0h3m1 0h7m2 0h7m-29 1h1m5 0h1m2 0h1m2 0h4m1 0h2m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h2m4 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m1 0h4m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h12m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m2 0h4m-19 1h1m2 0h1m1 0h2m1 0h1m1 0h1m4 0h2m2 0h3m1 0h1m-24 1h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m3 0h3m3 0h2m1 0h1m2 0h1m-29 1h3m2 0h4m3 0h1m6 0h1m3 0h1m1 0h3m-28 1h1m3 0h1m2 0h3m4 0h1m1 0h1m4 0h1m4 0h2m-28 1h3m1 0h9m2 0h3m4 0h1m2 0h1m1 0h2m-29 1h2m1 0h1m1 0h1m1 0h1m2 0h2m4 0h1m2 0h1m-20 1h1m1 0h1m2 0h5m1 0h1m4 0h2m2 0h1m2 0h1m1 0h4m-26 1h1m1 0h1m4 0h1m1 0h3m2 0h3m3 0h1m1 0h1m1 0h1m-25 1h7m1 0h1m1 0h2m2 0h2m4 0h1m3 0h1m-26 1h1m1 0h1m4 0h4m3 0h2m2 0h1m1 0h2m1 0h1m2 0h1m-29 1h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m4 0h1m1 0h1m2 0h2m-26 1h2m3 0h3m1 0h2m1 0h1m1 0h1m3 0h2m4 0h2m-29 1h1m1 0h1m2 0h2m2 0h1m1 0h2m1 0h1m5 0h5m1 0h1m-19 1h2m3 0h1m2 0h2m2 0h1m3 0h1m1 0h3m-29 1h7m2 0h1m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1m-28 1h1m5 0h1m1 0h3m1 0h2m1 0h1m2 0h3m3 0h3m-27 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h4m2 0h5m2 0h2m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m6 0h2m1 0h4m-28 1h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h3m2 0h1m1 0h4m1 0h1m-29 1h1m5 0h1m4 0h1m1 0h1m1 0h4m1 0h2m5 0h1m-28 1h7m1 0h1m1 0h4m2 0h2m1 0h3m1 0h1m1 0h1m1 0h1"/></svg></div>
+            <div class="qr-img" id="qrSitio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#002b63" d="M2 2.5h7m2 0h3m1 0h7m2 0h7m-29 1h1m5 0h1m2 0h1m2 0h4m1 0h2m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h2m4 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m1 0h4m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h12m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m2 0h4m-19 1h1m2 0h1m1 0h2m1 0h1m1 0h1m4 0h2m2 0h3m1 0h1m-24 1h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m3 0h3m3 0h2m1 0h1m2 0h1m-29 1h3m2 0h4m3 0h1m6 0h1m3 0h1m1 0h3m-28 1h1m3 0h1m2 0h3m4 0h1m1 0h1m4 0h1m4 0h2m-28 1h3m1 0h9m2 0h3m4 0h1m2 0h1m1 0h2m-29 1h2m1 0h1m1 0h1m1 0h1m2 0h2m4 0h1m2 0h1m-20 1h1m1 0h1m2 0h5m1 0h1m4 0h2m2 0h1m2 0h1m1 0h4m-26 1h1m1 0h1m4 0h1m1 0h3m2 0h3m3 0h1m1 0h1m1 0h1m-25 1h7m1 0h1m1 0h2m2 0h2m4 0h1m3 0h1m-26 1h1m1 0h1m4 0h4m3 0h2m2 0h1m1 0h2m1 0h1m2 0h1m-29 1h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m4 0h1m1 0h1m2 0h2m-26 1h2m3 0h3m1 0h2m1 0h1m1 0h1m3 0h2m4 0h2m-29 1h1m1 0h1m2 0h2m2 0h1m1 0h2m1 0h1m5 0h5m1 0h1m-19 1h2m3 0h1m2 0h2m2 0h1m3 0h1m1 0h3m-29 1h7m2 0h1m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1m-28 1h1m5 0h1m1 0h3m1 0h2m1 0h1m2 0h3m3 0h3m-27 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h4m2 0h5m2 0h2m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m6 0h2m1 0h4m-28 1h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h3m2 0h1m1 0h4m1 0h1m-29 1h1m5 0h1m4 0h1m1 0h1m1 0h4m1 0h2m5 0h1m-28 1h7m1 0h1m1 0h4m2 0h2m1 0h3m1 0h1m1 0h1m1 0h1"/></svg></div>
             <h3>Cooperativa Marco Polo</h3>
-            <p>https://m4rc090101979-lgtm.github.io/</p>
+            <p>m4rc090101979-lgtm.github.io</p>
             <div class="btns">
-              <button class="btn btn-blue" type="button" onclick="descargarQR('qrSitio','Visita nuestra página oficial','QR_Pagina_Oficial_Marco_Polo.png')">⬇️ Descargar QR</button>
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrSitio','Visita nuestra página oficial','QR_Pagina_Oficial_Marco_Polo.png')">⬇️ Descargar</button>
               <button class="btn btn-outline" type="button" onclick="compartirURL('Cooperativa Marco Polo','https://m4rc090101979-lgtm.github.io/')">🔗 Compartir</button>
             </div>
           </div>
           <div class="qr-item reveal">
-            <span class="qr-badge">💲 Consulta de pasajes</span>
-            <div class="qr-img" id="qrTarifas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="segno"><path class="qrline" stroke="#000" d="M2 2.5h7m1 0h1m1 0h3m1 0h1m3 0h1m1 0h1m3 0h1m1 0h7m-33 1h1m5 0h1m1 0h2m1 0h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h3m1 0h1m2 0h1m4 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h2m1 0h1m2 0h4m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h4m1 0h6m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h3m4 0h1m3 0h1m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h1m2 0h2m1 0h1m2 0h1m2 0h2m-23 1h1m4 0h7m1 0h4m2 0h1m2 0h1m1 0h1m5 0h2m-33 1h1m1 0h2m3 0h1m1 0h2m3 0h1m1 0h1m1 0h3m2 0h2m3 0h3m-31 1h1m2 0h4m5 0h1m1 0h2m2 0h1m1 0h3m3 0h1m1 0h1m1 0h2m-30 1h1m4 0h2m1 0h2m4 0h1m1 0h3m2 0h2m2 0h4m-31 1h2m1 0h2m1 0h1m1 0h3m6 0h3m3 0h2m1 0h2m4 0h1m-32 1h3m3 0h1m3 0h2m1 0h3m1 0h3m2 0h1m1 0h3m1 0h1m1 0h2m-33 1h1m1 0h2m1 0h3m4 0h2m3 0h1m2 0h2m3 0h3m1 0h3m-32 1h1m2 0h3m1 0h4m1 0h1m1 0h4m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m-33 1h2m4 0h6m2 0h1m5 0h1m2 0h3m1 0h2m3 0h1m-33 1h2m2 0h1m3 0h2m1 0h2m1 0h3m1 0h2m2 0h2m2 0h1m2 0h4m-33 1h4m1 0h2m1 0h4m3 0h1m3 0h1m1 0h4m1 0h2m1 0h2m1 0h1m-33 1h1m1 0h1m2 0h1m3 0h2m1 0h2m4 0h1m3 0h4m2 0h5m-32 1h1m2 0h1m1 0h1m2 0h1m1 0h6m2 0h1m2 0h1m1 0h2m2 0h2m1 0h1m-32 1h3m2 0h1m1 0h1m2 0h1m1 0h2m1 0h2m2 0h1m3 0h1m3 0h3m-30 1h1m2 0h1m1 0h3m1 0h1m2 0h2m2 0h3m2 0h1m2 0h3m4 0h1m-32 1h1m9 0h7m2 0h2m1 0h2m1 0h1m2 0h4m-32 1h2m1 0h10m1 0h1m3 0h2m2 0h1m1 0h6m-22 1h2m1 0h1m1 0h2m4 0h1m2 0h3m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h4m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m4 0h1m1 0h2m1 0h1m3 0h1m1 0h3m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h4m1 0h2m3 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m8 0h3m1 0h2m3 0h1m2 0h4m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m2 0h2m2 0h2m-33 1h1m5 0h1m1 0h3m1 0h5m1 0h1m8 0h4m-31 1h7m2 0h2m6 0h1m1 0h2m3 0h1m1 0h2m3 0h1"/></svg></div>
-            <h3>Consulta tu tarifa</h3>
-            <p>https://m4rc090101979-lgtm.github.io/tarifas/</p>
+            <span class="qr-badge">📲 Anticipa tu viaje</span>
+            <div class="qr-img" id="qrWhats"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" class="segno"><path class="qrline" stroke="#002b63" d="M2 2.5h7m1 0h1m2 0h2m1 0h1m1 0h1m3 0h4m1 0h6m3 0h7m-41 1h1m5 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h5m2 0h2m1 0h2m1 0h2m1 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m3 0h1m2 0h2m1 0h4m2 0h2m2 0h4m1 0h1m2 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h5m3 0h1m2 0h1m2 0h3m4 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m6 0h2m2 0h2m1 0h1m3 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m1 0h2m1 0h2m4 0h6m5 0h2m1 0h2m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-33 1h1m2 0h1m2 0h1m2 0h1m2 0h2m1 0h2m1 0h2m1 0h2m1 0h1m-33 1h1m3 0h1m1 0h3m2 0h3m1 0h1m1 0h2m2 0h1m4 0h2m1 0h1m3 0h5m2 0h1m-41 1h1m1 0h2m3 0h3m1 0h1m3 0h1m1 0h1m2 0h1m1 0h4m1 0h1m2 0h1m2 0h5m1 0h2m-41 1h1m1 0h1m3 0h3m1 0h2m3 0h1m2 0h1m3 0h3m2 0h1m1 0h1m2 0h2m5 0h2m-40 1h1m2 0h1m3 0h1m1 0h1m1 0h3m1 0h4m1 0h3m2 0h2m1 0h4m1 0h2m1 0h1m2 0h1m-41 1h1m1 0h3m1 0h1m1 0h5m2 0h1m1 0h5m1 0h1m5 0h2m1 0h2m1 0h1m3 0h1m-40 1h3m6 0h2m2 0h1m1 0h1m2 0h2m2 0h1m1 0h1m3 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-41 1h4m1 0h2m2 0h1m1 0h3m1 0h3m1 0h1m1 0h6m1 0h1m1 0h1m1 0h4m3 0h2m-40 1h1m1 0h2m2 0h1m2 0h3m2 0h3m1 0h5m5 0h2m1 0h1m4 0h1m-37 1h1m2 0h3m1 0h2m1 0h1m1 0h2m1 0h2m3 0h2m1 0h1m2 0h1m1 0h3m3 0h1m1 0h1m-35 1h1m3 0h2m2 0h3m2 0h3m1 0h1m2 0h1m3 0h2m1 0h1m2 0h4m1 0h3m-41 1h3m1 0h1m1 0h7m5 0h1m1 0h10m2 0h1m2 0h1m1 0h1m2 0h1m-41 1h1m1 0h3m3 0h1m2 0h3m6 0h2m3 0h1m1 0h3m2 0h1m1 0h2m-36 1h1m3 0h3m3 0h3m1 0h1m4 0h2m3 0h2m4 0h4m5 0h2m-39 1h1m2 0h1m3 0h1m1 0h1m3 0h1m2 0h1m2 0h6m1 0h1m1 0h1m4 0h4m1 0h1m-41 1h1m1 0h1m1 0h4m2 0h2m1 0h1m2 0h3m1 0h5m1 0h4m2 0h1m1 0h3m1 0h1m1 0h1m-39 1h3m2 0h1m1 0h1m2 0h2m3 0h1m1 0h3m2 0h1m1 0h7m1 0h1m5 0h1m-41 1h3m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m2 0h1m2 0h2m1 0h2m1 0h1m4 0h1m-41 1h2m1 0h1m5 0h6m5 0h1m1 0h4m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m-41 1h4m1 0h4m1 0h3m1 0h1m1 0h3m1 0h6m1 0h1m1 0h2m1 0h4m3 0h2m-37 1h2m2 0h1m1 0h2m3 0h1m1 0h2m2 0h2m4 0h1m1 0h4m1 0h2m1 0h1m2 0h1m-41 1h1m1 0h1m1 0h1m1 0h1m6 0h1m1 0h1m1 0h3m2 0h1m1 0h1m2 0h4m1 0h2m1 0h1m4 0h1m-41 1h1m4 0h1m2 0h2m1 0h1m2 0h2m1 0h1m1 0h2m1 0h1m2 0h2m7 0h3m1 0h1m-37 1h2m2 0h1m1 0h2m1 0h1m2 0h2m1 0h2m1 0h3m3 0h2m1 0h2m2 0h1m1 0h1m1 0h1m2 0h1m-39 1h4m2 0h2m1 0h3m1 0h4m2 0h1m2 0h1m2 0h5m1 0h1m1 0h3m1 0h1m-40 1h5m1 0h2m6 0h1m1 0h2m1 0h6m3 0h3m1 0h5m-29 1h2m2 0h5m1 0h1m1 0h4m1 0h3m1 0h1m1 0h2m3 0h5m-41 1h7m1 0h2m1 0h1m5 0h1m5 0h2m2 0h2m1 0h3m1 0h1m1 0h1m1 0h3m-41 1h1m5 0h1m2 0h2m1 0h1m2 0h1m1 0h3m2 0h2m2 0h1m1 0h1m2 0h2m3 0h1m3 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m1 0h1m4 0h1m1 0h3m1 0h5m1 0h1m2 0h6m3 0h1m-41 1h1m1 0h3m1 0h1m2 0h4m1 0h1m1 0h2m5 0h1m3 0h1m1 0h2m1 0h1m2 0h1m1 0h3m-40 1h1m1 0h3m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h3m2 0h2m1 0h1m1 0h2m6 0h1m-41 1h1m5 0h1m3 0h3m4 0h2m2 0h2m3 0h1m1 0h2m2 0h2m1 0h1m1 0h1m1 0h2m-41 1h7m1 0h2m2 0h3m1 0h1m2 0h1m1 0h1m4 0h1m2 0h1m2 0h1m2 0h2m2 0h1"/></svg></div>
+            <h3>WhatsApp</h3>
+            <p>+593 0979 212 249</p>
             <div class="btns">
-              <button class="btn btn-blue" type="button" onclick="descargarQR('qrTarifas','Consulta el valor de tu pasaje','QR_Consulta_Pasajes_Marco_Polo.png')">⬇️ Descargar QR</button>
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrWhats','Anticipa tu viaje por WhatsApp','QR_WhatsApp_Marco_Polo.png')">⬇️ Descargar</button>
+              <button class="btn btn-outline" type="button" onclick="compartirURL('WhatsApp Cooperativa Marco Polo','https://wa.me/593979212249')">🔗 Compartir</button>
+            </div>
+          </div>
+          <div class="qr-item reveal">
+            <span class="qr-badge">📮 Buzón y denuncias</span>
+            <div class="qr-img" id="qrBuzon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="segno"><path class="qrline" stroke="#002b63" d="M2 2.5h7m2 0h1m1 0h1m3 0h4m1 0h5m1 0h7m-33 1h1m5 0h1m2 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m2 0h2m4 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m2 0h3m1 0h3m2 0h2m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m2 0h6m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m1 0h2m7 0h2m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-22 1h1m2 0h1m2 0h2m2 0h1m2 0h1m-24 1h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m-30 1h3m4 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h4m3 0h3m-31 1h2m1 0h3m2 0h1m2 0h3m2 0h1m2 0h1m1 0h3m1 0h1m2 0h1m1 0h1m-32 1h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m2 0h7m-19 1h1m2 0h1m1 0h1m1 0h1m3 0h1m3 0h5m1 0h1m1 0h1m1 0h2m2 0h1m-33 1h3m1 0h2m3 0h2m2 0h1m1 0h2m2 0h2m2 0h1m3 0h1m1 0h1m-28 1h8m1 0h1m3 0h3m3 0h8m2 0h1m-31 1h2m1 0h2m3 0h5m1 0h3m1 0h5m1 0h2m1 0h2m-29 1h1m3 0h3m3 0h1m2 0h1m1 0h3m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m-32 1h1m3 0h2m2 0h1m1 0h1m1 0h2m2 0h3m1 0h1m1 0h2m1 0h1m3 0h2m-31 1h1m1 0h1m1 0h3m5 0h2m1 0h1m4 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m-31 1h1m2 0h1m3 0h1m7 0h1m1 0h1m2 0h2m2 0h1m1 0h1m3 0h2m-31 1h2m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m1 0h3m1 0h1m1 0h4m2 0h1m-33 1h1m2 0h2m2 0h1m5 0h1m1 0h4m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m-29 1h1m2 0h2m1 0h1m2 0h1m2 0h3m2 0h4m1 0h2m1 0h4m-30 1h2m3 0h6m1 0h4m1 0h3m2 0h2m1 0h1m3 0h2m-33 1h2m1 0h1m1 0h2m6 0h1m1 0h1m1 0h2m2 0h1m1 0h6m2 0h1m-24 1h1m1 0h7m1 0h1m1 0h1m1 0h3m3 0h1m1 0h2m-32 1h7m2 0h2m3 0h1m1 0h1m3 0h2m2 0h1m1 0h1m1 0h2m1 0h1m-32 1h1m5 0h1m2 0h2m1 0h1m1 0h1m1 0h1m4 0h1m2 0h1m3 0h1m-29 1h1m1 0h3m1 0h1m1 0h7m2 0h1m1 0h4m1 0h6m-30 1h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m5 0h1m1 0h8m-32 1h1m1 0h3m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1m2 0h2m2 0h4m1 0h1m-31 1h1m5 0h1m1 0h4m6 0h2m1 0h4m-25 1h7m2 0h1m3 0h2m2 0h2m2 0h1m2 0h2m6 0h1"/></svg></div>
+            <h3>Buzón de sugerencias</h3>
+            <p>Denuncias de 06:00 a 18:00 · 365 días</p>
+            <div class="btns">
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrBuzon','Buzón de sugerencias y denuncias','QR_Buzon_Marco_Polo.png')">⬇️ Descargar</button>
+              <button class="btn btn-outline" type="button" onclick="compartirURL('Buzón Cooperativa Marco Polo','https://m4rc090101979-lgtm.github.io/#buzon')">🔗 Compartir</button>
+            </div>
+          </div>
+          <div class="qr-item reveal">
+            <span class="qr-badge">💲 Consulta de pasajes</span>
+            <div class="qr-img" id="qrTarifas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" class="segno"><path class="qrline" stroke="#002b63" d="M2 2.5h7m1 0h1m1 0h3m1 0h1m3 0h1m1 0h1m3 0h1m1 0h7m-33 1h1m5 0h1m1 0h2m1 0h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h3m1 0h1m2 0h1m4 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h2m1 0h1m2 0h4m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h4m1 0h6m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h3m4 0h1m3 0h1m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h1m2 0h2m1 0h1m2 0h1m2 0h2m-23 1h1m4 0h7m1 0h4m2 0h1m2 0h1m1 0h1m5 0h2m-33 1h1m1 0h2m3 0h1m1 0h2m3 0h1m1 0h1m1 0h3m2 0h2m3 0h3m-31 1h1m2 0h4m5 0h1m1 0h2m2 0h1m1 0h3m3 0h1m1 0h1m1 0h2m-30 1h1m4 0h2m1 0h2m4 0h1m1 0h3m2 0h2m2 0h4m-31 1h2m1 0h2m1 0h1m1 0h3m6 0h3m3 0h2m1 0h2m4 0h1m-32 1h3m3 0h1m3 0h2m1 0h3m1 0h3m2 0h1m1 0h3m1 0h1m1 0h2m-33 1h1m1 0h2m1 0h3m4 0h2m3 0h1m2 0h2m3 0h3m1 0h3m-32 1h1m2 0h3m1 0h4m1 0h1m1 0h4m2 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m-33 1h2m4 0h6m2 0h1m5 0h1m2 0h3m1 0h2m3 0h1m-33 1h2m2 0h1m3 0h2m1 0h2m1 0h3m1 0h2m2 0h2m2 0h1m2 0h4m-33 1h4m1 0h2m1 0h4m3 0h1m3 0h1m1 0h4m1 0h2m1 0h2m1 0h1m-33 1h1m1 0h1m2 0h1m3 0h2m1 0h2m4 0h1m3 0h4m2 0h5m-32 1h1m2 0h1m1 0h1m2 0h1m1 0h6m2 0h1m2 0h1m1 0h2m2 0h2m1 0h1m-32 1h3m2 0h1m1 0h1m2 0h1m1 0h2m1 0h2m2 0h1m3 0h1m3 0h3m-30 1h1m2 0h1m1 0h3m1 0h1m2 0h2m2 0h3m2 0h1m2 0h3m4 0h1m-32 1h1m9 0h7m2 0h2m1 0h2m1 0h1m2 0h4m-32 1h2m1 0h10m1 0h1m3 0h2m2 0h1m1 0h6m-22 1h2m1 0h1m1 0h2m4 0h1m2 0h3m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h4m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m4 0h1m1 0h2m1 0h1m3 0h1m1 0h3m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h4m1 0h2m3 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m8 0h3m1 0h2m3 0h1m2 0h4m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m2 0h2m2 0h2m-33 1h1m5 0h1m1 0h3m1 0h5m1 0h1m8 0h4m-31 1h7m2 0h2m6 0h1m1 0h2m3 0h1m1 0h2m3 0h1"/></svg></div>
+            <h3>Consulta tu tarifa</h3>
+            <p>Resolución 020-DIR-2026-ANT</p>
+            <div class="btns">
+              <button class="btn btn-blue" type="button" onclick="descargarQR('qrTarifas','Consulta el valor de tu pasaje','QR_Consulta_Pasajes_Marco_Polo.png')">⬇️ Descargar</button>
               <button class="btn btn-outline" type="button" onclick="compartirURL('Tarifas Cooperativa Marco Polo','https://m4rc090101979-lgtm.github.io/tarifas/')">🔗 Compartir</button>
             </div>
           </div>
@@ -637,42 +709,71 @@
       <div class="container">
         <div class="section-head reveal">
           <div class="section-kicker">Tu opinión nos importa</div>
-          <h2>Buzón de sugerencias</h2>
-          <p>Cuéntanos cómo fue tu viaje. Leemos cada mensaje para mejorar el servicio.</p>
+          <h2>Buzón de sugerencias y denuncias</h2>
+          <p>Cada mensaje recibe un número de caso. Con ese número puedes dar seguimiento a tu trámite en la oficina o por WhatsApp.</p>
         </div>
         <div class="buzon-box">
           <div class="buzon-info reveal">
-            <h3>¿Qué puedes enviarnos?</h3>
-            <p>Tu mensaje llega directo a la administración de la cooperativa.</p>
+            <div class="bz-status" id="bzStatus"><i></i><span>Comprobando horario…</span></div>
+            <h3>Horario de atención de denuncias</h3>
+            <p class="bz-hours">06:00 a 18:00<small>los 365 días del año, incluidos feriados</small></p>
             <ul>
-              <li>Sugerencias para mejorar el servicio</li>
-              <li>Quejas o reclamos (indica unidad, ruta y hora)</li>
-              <li>Felicitaciones a conductores y ayudantes</li>
-              <li>Objetos perdidos</li>
+              <li><b>Denuncias:</b> maltrato, acoso, conducción peligrosa, cobro indebido</li>
+              <li><b>Quejas:</b> unidad no pasó, no respetó la parada, mal servicio</li>
+              <li><b>Sugerencias</b> y <b>felicitaciones</b> a conductores</li>
+              <li><b>Objetos perdidos</b> (indica ruta, unidad y hora)</li>
             </ul>
-            <p style="margin-top:16px"><b>Puedes hacerlo de forma anónima.</b></p>
+            <p class="bz-small">Todo llega a nuestro WhatsApp oficial <b>0979 212 249</b>. Las denuncias enviadas fuera de horario se guardan y las respondemos al día siguiente, desde las 06:00.</p>
+            <div class="bz-911">🚨 Si hay una emergencia o tu vida corre peligro, llama al <a href="tel:911"><b>ECU 911</b></a>.</div>
           </div>
-          <form class="buzon-form reveal" id="buzonForm">
+
+          <form class="buzon-form reveal" id="buzonForm" novalidate>
+            <div class="bz-step">1 · ¿Qué deseas reportar?</div>
             <div class="chips" id="bzTipo">
               <button type="button" class="chip on" data-v="Sugerencia">💡 Sugerencia</button>
               <button type="button" class="chip" data-v="Queja o reclamo">⚠️ Queja</button>
+              <button type="button" class="chip" data-v="Denuncia">🚨 Denuncia</button>
               <button type="button" class="chip" data-v="Felicitación">🌟 Felicitación</button>
               <button type="button" class="chip" data-v="Objeto perdido">🎒 Objeto perdido</button>
             </div>
-            <div>
+            <div class="bz-step">2 · Datos del viaje</div>
+            <div class="bz-row">
+              <select id="bzRuta"><option value="">Ruta</option><option>Ruta A · Loreto – Sangolquí – La Marín</option><option>Ruta B · Jatumpungo – Sangolquí – La Marín</option><option>Ruta C · San Fernando – Sangolquí – La Marín</option><option>Ruta D · Sangolquí – Pifo – Cusubamba</option></select>
+              <input id="bzUnidad" inputmode="numeric" placeholder="N.º de unidad o placa">
+            </div>
+            <label class="bz-label">Fecha y hora del hecho<input id="bzFecha" type="datetime-local"></label>
+            <div class="bz-step">3 · Cuéntanos qué pasó</div>
+            <textarea id="bzMsg" placeholder="Describe lo ocurrido con el mayor detalle posible…"></textarea>
+            <div id="bzRate">
               <b style="color:var(--blue-deep)">¿Cómo calificas nuestro servicio?</b>
               <div class="stars" id="bzStars"><b data-n="1">★</b><b data-n="2">★</b><b data-n="3">★</b><b data-n="4">★</b><b data-n="5">★</b></div>
             </div>
-            <select id="bzRuta"><option value="">Ruta (opcional)</option><option>Ruta 1 · Jatumpungo ↔ Selva Alegre</option><option>Ruta 2 · Cashapamba ↔ Loreto</option><option>Ruta 3 · Sangolquí ↔ Cusubamba</option><option>Ruta 4 · San Fernando ↔ La Marín</option></select>
-            <input id="bzUnidad" placeholder="N.º de unidad, fecha y hora (opcional)">
-            <input id="bzNombre" placeholder="Tu nombre (opcional)">
-            <textarea id="bzMsg" required placeholder="Escribe aquí tu mensaje..."></textarea>
-            <label class="check-line"><input type="checkbox" id="bzAnon"> Enviar de forma anónima</label>
+            <div class="bz-row" id="bzContacto">
+              <input id="bzNombre" autocomplete="name" placeholder="Tu nombre">
+              <input id="bzTel" type="tel" autocomplete="tel" placeholder="Celular para darte respuesta">
+            </div>
+            <label class="check-line"><input type="checkbox" id="bzAnon"> Enviar de forma anónima (no podremos responderte)</label>
+            <p class="bz-err" id="bzErr" hidden></p>
             <div class="buzon-actions">
-              <button class="btn btn-green" type="submit">📲 Enviar por WhatsApp</button>
+              <button class="btn btn-green" type="submit" id="bzSend">📲 Enviar mi caso por WhatsApp</button>
             </div>
           </form>
+        <div class="bz-ok" id="bzOk" hidden>
+            <div class="bz-ok-card">
+              <div class="bz-ok-icon">✅</div>
+              <h3>Tu caso está listo</h3>
+              <p>Número de caso</p>
+              <div class="bz-folio" id="bzFolio">—</div>
+              <p id="bzOkMsg"></p>
+              <div class="buzon-actions" style="justify-content:center">
+                <a class="btn btn-green" id="bzWa" href="#" target="_blank" rel="noopener">💬 Abrir WhatsApp otra vez</a>
+                <button class="btn btn-outline" type="button" id="bzCopy">📋 Copiar número</button>
+                <button class="btn btn-outline" type="button" id="bzNew">Nuevo mensaje</button>
+              </div>
+            </div>
         </div>
+
+</div>
       </div>
     </section>
 
@@ -681,7 +782,7 @@
         <div class="section-head">
           <div class="section-kicker">Estamos para servirte</div>
           <h2>Contáctanos</h2>
-          <p>Déjanos tu consulta y te ayudaremos con rutas, horarios y boletos.</p>
+          <p>Déjanos tu consulta y te ayudamos con rutas, frecuencias y tu próximo viaje.</p>
         </div>
         <div class="sede reveal">
           <img src="sede-marco-polo.webp" alt="Sede de la Cooperativa Marco Polo en Cashapamba" loading="lazy">
@@ -695,9 +796,9 @@
         <div class="contact-grid">
           <div class="contact-card">
             <h3>Información de contacto</h3>
-            <div class="contact-row"><span>📱</span><div><b>WhatsApp</b><a href="https://wa.me/593979212249" target="_blank" rel="noopener">+593 979 212 249</a></div></div>
-            <div class="contact-row"><span>🚌</span><div><b>Rutas</b><span>Jatumpungo · Selva Alegre · Cashapamba · Loreto · Sangolquí · Cusubamba · San Fernando · La Marín</span></div></div>
-            <div class="contact-row"><span>⏰</span><div><b>Horarios</b><span>Consulta la programación de cada ruta.</span></div></div>
+            <div class="contact-row"><span>📱</span><div><b>WhatsApp</b><a href="https://wa.me/593979212249" target="_blank" rel="noopener">+593 0979 212 249</a></div></div>
+            <div class="contact-row"><span>🚌</span><div><b>Rutas</b><span>Loreto · Jatumpungo · San Fernando · Sangolquí · La Marín · Pifo · Santa Rosa de Cusubamba</span></div></div>
+            <div class="contact-row"><span>⏰</span><div><b>Servicio</b><span>Todos los días desde las 04:00 · Denuncias de 06:00 a 18:00, los 365 días</span></div></div>
             <div class="contact-row"><span>📍</span><div><b>Oficina</b><span>Calle Antonio Tandazo, sector Cashapamba, lote 13 · Sangolquí, Ecuador</span></div></div>
           </div>
           <div class="contact-card">
@@ -705,7 +806,7 @@
             <form id="contactForm">
               <input id="nombre" required placeholder="Tu nombre">
               <input id="telefono" placeholder="Teléfono">
-              <select id="ruta"><option value="">Selecciona una ruta</option><option>Ruta 1 · Jatumpungo ↔ Selva Alegre</option><option>Ruta 2 · Cashapamba ↔ Loreto</option><option>Ruta 3 · Sangolquí ↔ Cusubamba</option><option>Ruta 4 · San Fernando ↔ La Marín</option></select>
+              <select id="ruta"><option value="">Selecciona una ruta</option><option>Ruta A · Loreto – Sangolquí – La Marín</option><option>Ruta B · Jatumpungo – Sangolquí – La Marín</option><option>Ruta C · San Fernando – Sangolquí – La Marín</option><option>Ruta D · Sangolquí – Pifo – Cusubamba</option></select>
               <textarea id="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea>
               <button class="btn btn-primary" type="submit">Enviar consulta por WhatsApp →</button>
             </form>
@@ -719,8 +820,8 @@
     <div class="container">
       <div class="footer-grid">
         <div><div class="footer-brand">COOPERATIVA MARCO POLO</div><p>Tu destino, nuestra misión. 47 años de experiencia conectando destinos.</p></div>
-        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y horarios</a><br><a href="#servicios">Servicios</a><br><a href="#qr">Códigos QR</a><br><a href="#buzon">Buzón de sugerencias</a><br><a href="#contacto">Contacto</a></p></div>
-        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 979 212 249</a><br>Calle Antonio Tandazo, sector Cashapamba, lote 13<br>Sangolquí, Ecuador</p></div>
+        <div><div class="footer-title">Navegación</div><p><a href="#nosotros">Nosotros</a><br><a href="#mision">Misión y visión</a><br><a href="#equipo">Trabajo en equipo</a><br><a href="#rutas">Rutas y frecuencias</a><br><a href="#servicios">Atención</a><br><a href="#qr">Códigos QR</a><br><a href="#buzon">Buzón y denuncias</a><br><a href="#contacto">Contacto</a></p></div>
+        <div><div class="footer-title">Contacto</div><p>WhatsApp: <a href="https://wa.me/593979212249">+593 0979 212 249</a><br>Denuncias: 06:00 a 18:00, 365 días<br>Calle Antonio Tandazo, sector Cashapamba, lote 13<br>Sangolquí, Ecuador</p></div>
       </div>
       <div class="copyright"><span>© <span id="year"></span> Cooperativa Marco Polo. Todos los derechos reservados.</span><span>Viaja con nosotros.</span></div>
     </div>
@@ -747,7 +848,7 @@
       const telefono = document.getElementById('telefono').value.trim();
       const ruta = document.getElementById('ruta').value;
       const mensaje = document.getElementById('mensaje').value.trim();
-      const text = `Hola Cooperativa Marco Polo.%0A%0ANombre: ${encodeURIComponent(nombre)}%0ATeléfono: ${encodeURIComponent(telefono)}%0ARuta: ${encodeURIComponent(ruta || 'Por definir')}%0AConsulta: ${encodeURIComponent(mensaje || 'Quiero información sobre horarios y boletos.')}`;
+      const text = `Hola Cooperativa Marco Polo.%0A%0ANombre: ${encodeURIComponent(nombre)}%0ATeléfono: ${encodeURIComponent(telefono)}%0ARuta: ${encodeURIComponent(ruta || 'Por definir')}%0AConsulta: ${encodeURIComponent(mensaje || 'Quiero anticipar mi viaje.')}`;
       window.open(`https://wa.me/593979212249?text=${text}`, '_blank');
     });
 
@@ -783,27 +884,82 @@
     }), {threshold:.5});
     document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
 
-    /* ---- Buzón de sugerencias ---- */
+    /* ---- Buzón de sugerencias y denuncias ---- */
+    const WA_NUM = '593979212249';
+    const TZ = 'America/Guayaquil';
+    const ahoraEc = () => {
+      const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x => [x.type, x.value]));
+      return {y:p.year, m:p.month, d:p.day, h:+p.hour, min:p.minute, txt:`${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`, iso:`${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}`};
+    };
+    const enHorario = () => { const n = ahoraEc(); return n.h >= 6 && n.h < 18; };
+    const statusEl = document.getElementById('bzStatus');
+    function pintarEstado(){
+      const ok = enHorario();
+      statusEl.className = 'bz-status ' + (ok ? 'open' : 'closed');
+      statusEl.querySelector('span').textContent = ok ? 'Abierto ahora · atendemos tu caso hoy' : 'Fuera de horario · tu caso se guarda y respondemos al día siguiente';
+    }
+    pintarEstado(); setInterval(pintarEstado, 60000);
+    document.getElementById('bzFecha').value = ahoraEc().iso;
+
     let tipo = 'Sugerencia', estrellas = 0;
     document.querySelectorAll('#bzTipo .chip').forEach(c => c.addEventListener('click', () => {
       document.querySelectorAll('#bzTipo .chip').forEach(x => x.classList.remove('on')); c.classList.add('on'); tipo = c.dataset.v;
+      document.getElementById('bzRate').style.display = (tipo === 'Denuncia' || tipo === 'Objeto perdido') ? 'none' : '';
     }));
     const stars = document.querySelectorAll('#bzStars b');
     stars.forEach(s => s.addEventListener('click', () => { estrellas = +s.dataset.n; stars.forEach(x => x.classList.toggle('on', +x.dataset.n <= estrellas)); }));
-    document.getElementById('buzonForm').addEventListener('submit', e => {
+    const anonEl = document.getElementById('bzAnon');
+    anonEl.addEventListener('change', () => { document.getElementById('bzContacto').style.display = anonEl.checked ? 'none' : ''; });
+
+    const PREF = {'Sugerencia':'SUG','Queja o reclamo':'QUE','Denuncia':'DEN','Felicitación':'FEL','Objeto perdido':'OBJ'};
+    function folio(){
+      const n = ahoraEc();
+      return `MP-${PREF[tipo]}-${n.y.slice(2)}${n.m}${n.d}-${n.h.toString().padStart(2,'0')}${n.min}${Math.floor(Math.random()*90+10)}`;
+    }
+    const err = document.getElementById('bzErr');
+    const okBox = document.getElementById('bzOk');
+    const form = document.getElementById('buzonForm');
+
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const v = id => document.getElementById(id).value.trim();
-      const anon = document.getElementById('bzAnon').checked;
-      const lineas = [
-        '📮 BUZÓN DE SUGERENCIAS - Cooperativa Marco Polo', '',
-        'Tipo: ' + tipo,
-        'Calificación: ' + (estrellas ? '★'.repeat(estrellas) + '☆'.repeat(5 - estrellas) + ' (' + estrellas + '/5)' : 'Sin calificar'),
-        'Ruta: ' + (v('bzRuta') || 'No indicada'),
-        'Unidad/fecha/hora: ' + (v('bzUnidad') || 'No indicada'),
-        'Nombre: ' + (anon ? 'Anónimo' : (v('bzNombre') || 'No indicado')), '',
-        'Mensaje: ' + v('bzMsg')
-      ];
-      window.open('https://wa.me/593979212249?text=' + encodeURIComponent(lineas.join('\n')), '_blank');
+      const anon = anonEl.checked;
+      const fallo = t => { err.textContent = t; err.hidden = false; };
+      err.hidden = true;
+      if (v('bzMsg').length < 10) return fallo('Por favor describe lo ocurrido (mínimo 10 caracteres).');
+      if ((tipo === 'Denuncia' || tipo === 'Queja o reclamo') && !v('bzRuta') && !v('bzUnidad')) return fallo('Indica al menos la ruta o el número de unidad para poder investigar.');
+      if (!anon && tipo === 'Objeto perdido' && !v('bzTel')) return fallo('Déjanos un celular para avisarte si encontramos tu objeto.');
+
+      const n = ahoraEc(), caso = folio(), dentro = enHorario();
+      const fh = v('bzFecha') ? v('bzFecha').replace('T',' ') : 'No indicada';
+      const datos = {
+        'Caso': caso, 'Tipo': tipo, 'Recibido': n.txt + (dentro ? ' (en horario)' : ' (fuera de horario)'),
+        'Ruta': v('bzRuta') || 'No indicada', 'Unidad/placa': v('bzUnidad') || 'No indicada', 'Fecha y hora del hecho': fh,
+        'Calificación': estrellas ? estrellas + '/5' : 'Sin calificar',
+        'Nombre': anon ? 'Anónimo' : (v('bzNombre') || 'No indicado'), 'Celular': anon ? '—' : (v('bzTel') || 'No indicado'),
+        'Mensaje': v('bzMsg')
+      };
+      const texto = '📮 BUZÓN MARCO POLO\n\n' + Object.entries(datos).map(([k,x]) => (k === 'Mensaje' ? '\n' : '') + k + ': ' + x).join('\n');
+      const waUrl = `https://wa.me/${WA_NUM}?text=` + encodeURIComponent(texto);
+      document.getElementById('bzWa').href = waUrl;
+      document.getElementById('bzFolio').textContent = caso;
+      const msgOk = document.getElementById('bzOkMsg');
+      const horario = dentro ? 'Estamos en horario de atención: revisamos tu caso hoy.' : 'Estamos fuera de horario: tu caso queda guardado y te respondemos al día siguiente, desde las 06:00.';
+
+      msgOk.innerHTML = horario + ' Se abrió WhatsApp con tu caso: <b>solo presiona enviar</b>. Si no se abrió, usa el botón verde. Guarda este número para dar seguimiento.';
+      window.open(waUrl, '_blank');
+      form.hidden = true;
+      okBox.hidden = false; okBox.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+    document.getElementById('bzCopy').addEventListener('click', async e => {
+      const t = document.getElementById('bzFolio').textContent;
+      try { await navigator.clipboard.writeText(t); e.target.textContent = '✔ Copiado'; } catch (x) { prompt('Tu número de caso:', t); }
+    });
+    document.getElementById('bzNew').addEventListener('click', () => {
+      form.reset(); form.hidden = false; okBox.hidden = true; estrellas = 0; stars.forEach(x => x.classList.remove('on'));
+      document.getElementById('bzContacto').style.display = ''; document.getElementById('bzRate').style.display = '';
+      document.querySelectorAll('#bzTipo .chip').forEach((x,i) => x.classList.toggle('on', i === 0)); tipo = 'Sugerencia';
+      document.getElementById('bzFecha').value = ahoraEc().iso; form.scrollIntoView({behavior:'smooth', block:'center'});
     });
 
     /* ---- PoloAmigo ---- */
@@ -900,22 +1056,22 @@
       if (/\s(a|hasta|hacia)\s/.test(' ' + q + ' ') && !tiene('horario','hora','salida','sale','turno'))
         return responderTarifa(texto);
       for (const r of rutas){
-        const claves = norm(r.nombre).split(' ').filter(w => w.length > 3 && !['ruta','marin'].includes(w));
+        const claves = norm(r.nombre).split(' ').filter(w => w.length > 3 && !['ruta','marin','sangolqui','rosa','santa'].includes(w));
         if ((tiene('horario','hora','salida','sale','ruta','turno') || tiene(...claves)) && tiene(...claves)) return bot('🕒 ' + htmlRuta(r));
       }
       if (tiene('horario','hora','salida','sale','turno','ruta','rutas'))
-        return bot('🕒 ¿De qué ruta quieres ver los horarios?' + opts(rutas.map(r => r.nombre)));
+        return bot('🕒 ¿De qué ruta quieres ver el horario y la frecuencia?' + opts(rutas.map(r => r.nombre)));
       if (tiene('mision','vision','valores','quienes son','cooperativa','historia'))
         return bot('🎯 <b>Misión:</b> ' + document.querySelector('.mv-card.mision p').textContent + '<br><br>🔭 <b>Visión 2030:</b> ' + document.querySelector('.mv-card.vision p').textContent);
       if (tiene('sugerencia','queja','reclamo','felicit','buzon','perdido','perdi','olvide','denuncia'))
         { setTimeout(() => document.getElementById('buzon').scrollIntoView({behavior:'smooth'}), 700);
-          return bot('📮 Te llevo al <b>Buzón de sugerencias</b>. Ahí puedes enviar sugerencias, quejas, felicitaciones u objetos perdidos, incluso de forma anónima.'); }
-      if (tiene('boleto','comprar','reserv','encomienda'))
-        return bot('🎫 Puedes solicitar tu boleto directamente por WhatsApp: <a href="' + WA + '?text=' + encodeURIComponent('Hola Marco Polo, quiero comprar un boleto.') + '" target="_blank" rel="noopener">Abrir WhatsApp</a>');
+          return bot('📮 Te llevo al <b>Buzón de sugerencias y denuncias</b>. Cada mensaje recibe un número de caso. Las denuncias se atienden de <b>06:00 a 18:00, los 365 días</b>. En emergencias llama al ECU 911.'); }
+      if (tiene('boleto','comprar','reserv','encomienda','anticip'))
+        return bot('📲 Anticipa tu viaje en nuestro WhatsApp <b>0979 212 249</b>: <a href="' + WA + '?text=' + encodeURIComponent('Hola Marco Polo, quiero anticipar mi viaje.') + '" target="_blank" rel="noopener">Abrir WhatsApp</a>');
       if (tiene('contacto','telefono','whatsapp','llamar','direccion','oficina','ubicacion','donde','sede','llegar','mapa'))
-        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 979 212 249</a><br>📍 <b>Oficina:</b> Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí.<br><a href="'+MAPS+'" target="_blank" rel="noopener">🗺️ Cómo llegar</a>');
+        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 0979 212 249</a><br>📍 <b>Oficina:</b> Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí.<br><a href="'+MAPS+'" target="_blank" rel="noopener">🗺️ Cómo llegar</a>');
       if (tiene('wifi','internet'))
-        return bot('📶 Nuestras unidades cuentan con Wi‑Fi a bordo para que viajes conectado.');
+        return bot('Por el momento nuestras unidades no cuentan con Wi‑Fi a bordo. ¿Te ayudo con algo más?' + opts(MENU));
       if (tiene('equipo','socio','conductor','chofer','directiv','gerente','presidente'))
         { setTimeout(() => document.getElementById('equipo').scrollIntoView({behavior:'smooth'}), 700);
           return bot('🤝 Somos un equipo de socios, conductores, ayudantes, despacho y directivos trabajando por tu viaje. Te muestro la sección <b>Trabajo en equipo</b>.'); }
@@ -925,7 +1081,7 @@
   </script>
   <script>
     function descargarQR(id, titulo, archivo){
-      const svg = document.querySelector('#' + id + ' svg').outerHTML.replace('<svg', '<svg width="900" height="900"');
+      const svg = document.querySelector('#' + id + ' svg').outerHTML.replace('<svg', '<svg width="900" height="900"').replace(/ width="100%"| height="100%"/g,'');
       const img = new Image();
       img.onload = () => {
         const W = 1000, c = document.createElement('canvas'); c.width = W; c.height = W + 260;
