@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://m4rc090101979-lgtm.github.io/sitemap.xml
+Sitemap: https://cooperativamarcopolo.github.io/sitemap.xml
