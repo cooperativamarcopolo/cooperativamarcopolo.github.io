@@ -1,0 +1,5 @@
+{
+  "actualizado": "2026-11-22",
+  "nota": "Registro de casos del buzón. Cada caso: folio, tipo, ruta, recibido (fecha y hora), respondido (fecha y hora o null). Se actualiza desde buzon/gestion.html.",
+  "casos": []
+}
