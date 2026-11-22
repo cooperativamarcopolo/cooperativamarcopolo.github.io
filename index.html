@@ -406,7 +406,24 @@
     .parte-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
     .parte-actions .btn-ghost{border-color:rgba(255,255,255,.55)}
     @media (max-width:980px){.cambio-grid{grid-template-columns:1fr}}
-  </style>
+  
+    .estad{background:#f4f8fd}
+    .es-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:22px}
+    .es-kpi{background:#fff;border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:4px}
+    .es-kpi span{font-weight:850;color:var(--muted);font-size:.85rem}
+    .es-kpi b{font-size:2.1rem;font-weight:950;color:var(--blue-deep);line-height:1.1;font-variant-numeric:tabular-nums}
+    .es-kpi small{color:var(--muted);font-size:.8rem}
+    .es-kpi.meta{background:linear-gradient(135deg,#003d82,#0079d8)}.es-kpi.meta span,.es-kpi.meta b{color:#fff}
+    .es-bar{height:8px;border-radius:9px;background:rgba(255,255,255,.25);overflow:hidden;margin-top:6px}.es-bar i{display:block;height:100%;width:0;background:#7dffb0;transition:width 1s}
+    .es-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .es-card{background:#fff;border-radius:22px;padding:22px;box-shadow:var(--shadow)}.es-card h3{margin:0 0 12px;color:var(--blue-deep)}
+    .es-rows{display:grid;gap:10px}.es-row{display:grid;grid-template-columns:170px 1fr 44px;gap:10px;align-items:center;font-weight:750;font-size:.9rem}
+    .es-row .tr{height:12px;border-radius:9px;background:#e8eef7;overflow:hidden}.es-row .tr i{display:block;height:100%;background:var(--blue);border-radius:9px}
+    .es-row b{text-align:right;color:var(--blue-deep)}.es-empty{color:var(--muted);margin:0}
+    .es-note{color:var(--muted);font-size:.85rem;margin-top:16px}
+    @media (max-width:980px){.es-kpis{grid-template-columns:repeat(2,1fr)}.es-grid{grid-template-columns:1fr}}
+    @media (max-width:620px){.es-row{grid-template-columns:120px 1fr 36px}}
+</style>
 </head>
 <body>
   <div class="topbar">
@@ -430,6 +447,7 @@
         <a href="#servicios">Atención</a>
         <a href="https://cooperativamarcopolo.github.io/tarifas/" target="_blank" rel="noopener">Tarifas</a>
         <a href="#buzon">Buzón</a>
+        <a href="#estadisticas">Estadísticas</a>
         <a href="#contacto">Contacto</a>
         <a class="nav-cta" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje." target="_blank" rel="noopener">Anticipa tu viaje</a>
       </nav>
@@ -443,7 +461,7 @@
         <div>
           <div class="eyebrow">🚌 47 años conectando destinos</div>
           <h1>Tu destino,<br><span>nuestra misión.</span></h1>
-          <p>Viaja con Cooperativa Marco Polo con comodidad, seguridad y confianza. Cuatro rutas desde Loreto, Jatumpungo, San Fernando y Sangolquí, con unidades cada 8 a 15 minutos desde las 05:00.</p>
+          <p>Viaja con Cooperativa Marco Polo con comodidad, seguridad y confianza. Cuatro rutas desde Loreto, Jatumpungo, San Fernando y Sangolquí, con unidades cada 8 a 15 minutos desde las 04:57.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#rutas">Ver rutas y horarios →</a>
             <a class="btn btn-ghost" href="https://wa.me/593979212249?text=Hola%20Marco%20Polo%2C%20quiero%20anticipar%20mi%20viaje." target="_blank" rel="noopener">💬 Anticipa tu viaje</a>
@@ -572,7 +590,7 @@
             <div class="schedule-head"><h4>Horario y frecuencia</h4><span class="schedule-note">Todos los días</span></div>
             <div class="times">
               <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">05:00</span></div></div>
-              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Hora pico: cada 8 min</span><span class="time">Hora valle: cada 12 min</span></div></div>
+              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Hora pico: cada 8 min</span><span class="time">Resto del día: cada 10 min</span><span class="time">Turno estudiantil: 06:16</span></div></div>
             </div>
           </div>
         </div>
@@ -581,15 +599,15 @@
           <div class="route-intro green">
             <div class="route-num">Ruta B</div>
             <h3>Jatumpungo – Sangolquí – La Marín</h3>
-            <div class="stops"><span>Jatumpungo</span><span>Sangolquí</span><span>La Marín</span></div>
-            <span class="route-pill">🕔 Desde las 05:03</span>
-            <span class="route-pill">🔁 Cada 12 min todo el día</span>
+            <div class="stops"><span>Jatumpungo</span><span>El Vínculo · Selva Alegre</span><span>Sangolquí</span><span>La Marín</span></div>
+            <span class="route-pill">🕔 Desde las 04:57</span>
+            <span class="route-pill">🔁 Cada 10 min</span>
           </div>
           <div class="schedule">
             <div class="schedule-head"><h4>Horario y frecuencia</h4><span class="schedule-note">Todos los días</span></div>
             <div class="times">
-              <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">05:03</span></div></div>
-              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Todo el día: cada 12 min</span></div></div>
+              <div class="station"><h5>PRIMERA SALIDA</h5><div class="time-list"><span class="time">04:57 · Conjunto Rosita Paredes</span><span class="time">04:57 · Jatumpungo</span></div></div>
+              <div class="station"><h5>FRECUENCIA</h5><div class="time-list"><span class="time">Hora pico: cada 10 min</span><span class="time">Hora valle: cada 12 min</span></div></div>
             </div>
           </div>
         </div>
@@ -760,7 +778,7 @@
         <div class="section-head reveal">
           <div class="section-kicker">Tu opinión nos importa</div>
           <h2>Buzón de sugerencias y denuncias</h2>
-          <p>Cada mensaje recibe un número de caso. Con ese número puedes dar seguimiento a tu trámite en la oficina o por WhatsApp.</p>
+          <p>Cada mensaje recibe un número de caso y llega a nuestro WhatsApp y al correo institucional. <b>Te respondemos en máximo 48 horas.</b></p>
         </div>
         <div class="buzon-box">
           <div class="buzon-info reveal">
@@ -773,7 +791,7 @@
               <li><b>Sugerencias</b> y <b>felicitaciones</b> a conductores</li>
               <li><b>Objetos perdidos</b> (indica ruta, unidad y hora)</li>
             </ul>
-            <p class="bz-small">Todo llega a nuestro WhatsApp oficial <b>0979 212 249</b>. Las denuncias enviadas fuera de horario se guardan y las respondemos al día siguiente, desde las 06:00.</p>
+            <p class="bz-small">Tu caso llega a nuestro WhatsApp oficial <b>0979 212 249</b> y al correo institucional <b>m4rc09010.1979@gmail.com</b>. <b>Compromiso de respuesta: máximo 48 horas.</b> Los casos enviados fuera de horario se registran y se atienden desde las 06:00 del día siguiente.</p>
             <div class="bz-911">🚨 Si hay una emergencia o tu vida corre peligro, llama al <a href="tel:911"><b>ECU 911</b></a>.</div>
           </div>
 
@@ -805,7 +823,7 @@
             <label class="check-line"><input type="checkbox" id="bzAnon"> Enviar de forma anónima (no podremos responderte)</label>
             <p class="bz-err" id="bzErr" hidden></p>
             <div class="buzon-actions">
-              <button class="btn btn-green" type="submit" id="bzSend">📲 Enviar mi caso por WhatsApp</button>
+              <button class="btn btn-green" type="submit" id="bzSend">📨 Enviar mi caso (WhatsApp y correo)</button>
             </div>
           </form>
         <div class="bz-ok" id="bzOk" hidden>
@@ -817,6 +835,7 @@
               <p id="bzOkMsg"></p>
               <div class="buzon-actions" style="justify-content:center">
                 <a class="btn btn-green" id="bzWa" href="#" target="_blank" rel="noopener">💬 Abrir WhatsApp otra vez</a>
+                <a class="btn btn-outline" id="bzMail" href="#">✉️ Enviar por correo</a>
                 <button class="btn btn-outline" type="button" id="bzCopy">📋 Copiar número</button>
                 <button class="btn btn-outline" type="button" id="bzNew">Nuevo mensaje</button>
               </div>
@@ -824,6 +843,28 @@
         </div>
 
 </div>
+      </div>
+    </section>
+
+    <section class="estad" id="estadisticas">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Mejora continua · Transparencia</div>
+          <h2>Estadísticas del buzón</h2>
+          <p>Publicamos cuántas sugerencias, quejas y denuncias recibimos y en cuánto tiempo respondemos. Nuestro compromiso: <b>respuesta en máximo 48 horas</b>.</p>
+        </div>
+        <div class="es-kpis reveal">
+          <div class="es-kpi"><span>Casos recibidos</span><b id="esRec">—</b><small>desde la página web</small></div>
+          <div class="es-kpi"><span>Casos atendidos</span><b id="esAte">—</b><small id="esCorte">según registro de la oficina</small></div>
+          <div class="es-kpi"><span>Tiempo promedio de respuesta</span><b id="esProm">—</b><small>meta: 48 horas o menos</small></div>
+          <div class="es-kpi meta"><span>Respondidos dentro de 48 h</span><b id="esPct">—</b><div class="es-bar"><i id="esPctBar"></i></div></div>
+          <div class="es-kpi"><span>Casos en trámite</span><b id="esPen">—</b><small id="esVenc">—</small></div>
+        </div>
+        <div class="es-grid reveal">
+          <div class="es-card"><h3>Por tipo de caso</h3><div id="esTipos" class="es-rows"><p class="es-empty">Cargando…</p></div></div>
+          <div class="es-card"><h3>Por ruta</h3><div id="esRutas" class="es-rows"><p class="es-empty">Cargando…</p></div></div>
+        </div>
+        <p class="es-note reveal">Los casos recibidos se cuentan automáticamente al enviar el buzón. Los tiempos de respuesta salen del registro que lleva la oficina de atención al usuario y se actualizan periódicamente.</p>
       </div>
     </section>
 
@@ -848,7 +889,8 @@
             <h3>Información de contacto</h3>
             <div class="contact-row"><span>📱</span><div><b>WhatsApp</b><a href="https://wa.me/593979212249" target="_blank" rel="noopener">+593 0979 212 249</a></div></div>
             <div class="contact-row"><span>🚌</span><div><b>Rutas</b><span>Loreto · Jatumpungo · San Fernando · Sangolquí · La Marín · Pifo · Santa Rosa de Cusubamba</span></div></div>
-            <div class="contact-row"><span>⏰</span><div><b>Servicio</b><span>Todos los días desde las 04:00 · Denuncias de 06:00 a 18:00, los 365 días</span></div></div>
+            <div class="contact-row"><span>✉️</span><div><b>Correo institucional</b><span><a href="mailto:m4rc09010.1979@gmail.com">m4rc09010.1979@gmail.com</a></span></div></div>
+            <div class="contact-row"><span>⏰</span><div><b>Servicio</b><span>Todos los días desde las 04:00 · Denuncias de 06:00 a 18:00, los 365 días · Respuesta en máximo 48 horas</span></div></div>
             <div class="contact-row"><span>📍</span><div><b>Oficina</b><span>Calle Antonio Tandazo, sector Cashapamba, lote 13 · Sangolquí, Ecuador</span></div></div>
           </div>
           <div class="contact-card">
@@ -936,6 +978,7 @@
 
     /* ---- Buzón de sugerencias y denuncias ---- */
     const WA_NUM = '593979212249';
+    const MAIL = 'm4rc09010.1979@gmail.com';
     const TZ = 'America/Guayaquil';
     const ahoraEc = () => {
       const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x => [x.type, x.value]));
@@ -946,7 +989,7 @@
     function pintarEstado(){
       const ok = enHorario();
       statusEl.className = 'bz-status ' + (ok ? 'open' : 'closed');
-      statusEl.querySelector('span').textContent = ok ? 'Abierto ahora · atendemos tu caso hoy' : 'Fuera de horario · tu caso se guarda y respondemos al día siguiente';
+      statusEl.querySelector('span').textContent = ok ? 'Abierto ahora · respuesta en máximo 48 horas' : 'Fuera de horario · tu caso se registra y respondemos en máximo 48 horas';
     }
     pintarEstado(); setInterval(pintarEstado, 60000);
     document.getElementById('bzFecha').value = ahoraEc().iso;
@@ -994,10 +1037,17 @@
       document.getElementById('bzWa').href = waUrl;
       document.getElementById('bzFolio').textContent = caso;
       const msgOk = document.getElementById('bzOkMsg');
-      const horario = dentro ? 'Estamos en horario de atención: revisamos tu caso hoy.' : 'Estamos fuera de horario: tu caso queda guardado y te respondemos al día siguiente, desde las 06:00.';
+      const horario = (dentro ? 'Estamos en horario de atención.' : 'Estamos fuera de horario: tu caso queda registrado y lo atendemos desde las 06:00.') + ' <b>Te respondemos en máximo 48 horas.</b>';
 
-      msgOk.innerHTML = horario + ' Se abrió WhatsApp con tu caso: <b>solo presiona enviar</b>. Si no se abrió, usa el botón verde. Guarda este número para dar seguimiento.';
+      msgOk.innerHTML = horario + ' Se abrió WhatsApp con tu caso: <b>solo presiona enviar</b>. Si no se abrió, usa el botón verde. <span id="bzMailSt">Enviando copia al correo institucional…</span> Guarda este número para dar seguimiento.';
+      document.getElementById('bzMail').href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Buzón Marco Polo · ' + tipo + ' · ' + caso) + '&body=' + encodeURIComponent(texto);
       window.open(waUrl, '_blank');
+      contarCaso(tipo);
+      fetch('https://formsubmit.co/ajax/' + MAIL, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(Object.assign({_subject:'Buzón Marco Polo · ' + tipo + ' · ' + caso, _template:'table', _captcha:'false'}, datos))})
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(j => { if (String(j.success) !== 'true') throw 0; document.getElementById('bzMailSt').textContent = '✔ Copia enviada al correo institucional.'; })
+        .catch(() => { document.getElementById('bzMailSt').innerHTML = 'No se pudo enviar la copia por correo: usa el botón <b>Enviar por correo</b>.'; });
       form.hidden = true;
       okBox.hidden = false; okBox.scrollIntoView({behavior:'smooth', block:'center'});
     });
@@ -1028,7 +1078,21 @@
       msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
     }
     function opts(list){ return '<div class="pa-opts">' + list.map(o => '<button type="button" data-q="' + o + '">' + o + '</button>').join('') + '</div>'; }
-    const MENU = ['🕒 Horarios','💲 Tarifas','🎓 Tarifa preferencial','🎯 Misión y visión','📮 Buzón','📞 Contacto'];
+    const MENU = ['🕒 Horarios','💲 Tarifas','🎓 Tarifa preferencial','❓ Preguntas frecuentes','📮 Buzón','📞 Contacto'];
+    const FAQ = [
+      {p:'¿Desde qué hora hay servicio?', k:['primera salida','que hora empieza','desde que hora','madrugada','temprano'], r:'🕔 Primeras salidas: <b>Ruta D</b> Sangolquí → Pifo → Cusubamba desde las <b>04:00</b>; <b>Ruta B</b> Jatumpungo desde las <b>04:57</b>; <b>Rutas A y C</b> (Loreto y San Fernando) desde las <b>05:00</b>. Todos los días.'},
+      {p:'¿Cada cuánto pasa el bus?', k:['cada cuanto','frecuencia','cuanto se demora en pasar','intervalo'], r:'⏱️ <b>Loreto:</b> cada 8 min en hora pico y 10 min el resto del día · <b>Jatumpungo:</b> cada 10 min (12 min en hora valle) · <b>San Fernando:</b> cada 15 min · <b>Cusubamba:</b> consulta por WhatsApp.'},
+      {p:'¿Qué tarifa se cobra y quién la fija?', k:['quien fija','resolucion','normativa','alza','subio','incremento','cobraron de mas'], r:'💲 Cobramos solo la tarifa oficial de la <b>Resolución 020-DIR-2026-ANT</b> de la Agencia Nacional de Tránsito, vigente desde el <b>1 de agosto de 2026</b>. Si te cobraron de más, repórtalo en el buzón con la ruta, la unidad y la hora.'},
+      {p:'¿Quién paga tarifa preferencial?', k:['quien paga medio','pasaje reducido','carne','tercera edad'], r:'🎓 La tarifa preferencial es el <b>50 %</b> del pasaje normal para estudiantes, niñas, niños y adolescentes, adultos mayores y personas con discapacidad. Presenta tu cédula o carné al abordar.'},
+      {p:'Perdí un objeto en el bus', k:['perdi','perdido','olvide','objeto perdido','mochila'], r:'🎒 Repórtalo en el <b>buzón</b> eligiendo <i>Objeto perdido</i>: indica ruta, número de unidad y hora aproximada, y deja tu celular. También puedes acercarte a la oficina en Cashapamba.', go:'buzon'},
+      {p:'¿En cuánto tiempo responden mi caso?', k:['cuanto tiempo responden','tiempo de respuesta','48','demoran en responder','seguimiento','numero de caso'], r:'⏳ Respondemos <b>en máximo 48 horas</b>. Tu caso llega a nuestro WhatsApp y al correo institucional. Con tu <b>número de caso</b> puedes dar seguimiento por WhatsApp o en la oficina.'},
+      {p:'¿Cómo pongo una denuncia o queja?', k:['como denuncio','poner una denuncia','maltrato','acoso','mal servicio','no paro'], r:'📮 Usa el <b>buzón</b> de esta página: elige el tipo, indica ruta y unidad y cuéntanos qué pasó. Llega por WhatsApp y correo, y recibes un número de caso. Denuncias de 06:00 a 18:00 los 365 días. En una emergencia llama al <b>ECU 911</b>.', go:'buzon'},
+      {p:'¿Venden boletos en línea?', k:['boleto','comprar','reserv','en linea','online'], r:'🎟️ No vendemos boletos en línea: el pasaje se paga al abordar. Para planificar tu salida, <b>anticipa tu viaje</b> por WhatsApp 0979 212 249.'},
+      {p:'¿Las unidades están monitoreadas?', k:['monitoreo','gps','camara','camaras','seguridad'], r:'🛡️ Sí. El despacho controla las salidas y la frecuencia de cada ruta en línea, y trabajamos con conductores capacitados en normativa ANT, conducción segura y buen trato.'},
+      {p:'¿Hay Wi‑Fi en los buses?', k:['wifi','internet'], r:'📶 Por el momento nuestras unidades no tienen Wi‑Fi a bordo.'},
+      {p:'¿Dónde está la oficina?', k:['horario de oficina','atencion en oficina'], r:'📍 Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí. Atención de lunes a viernes de 08:00 a 17:00.'},
+      {p:'¿Cómo ven las estadísticas del buzón?', k:['estadistica','cuantos casos','transparencia'], r:'📊 En la sección <b>Estadísticas del buzón</b> publicamos los casos recibidos por tipo y ruta, el tiempo promedio de respuesta y el porcentaje atendido dentro de 48 horas.', go:'estadisticas'}
+    ];
 
     function bot(html){
       const t = document.createElement('div'); t.className = 'pa-m pa-bot pa-typing'; t.innerHTML = '<span></span><span></span><span></span>';
@@ -1090,17 +1154,24 @@
     function enviar(texto){
       texto = (texto || '').trim(); if (!texto) return;
       add(esc(texto), 'u'); input.value = '';
-      const ALIAS = {'🕒 Horarios':'horarios','💲 Tarifas':'tarifa','🎓 Tarifa preferencial':'preferencial','🎯 Misión y visión':'mision','📮 Buzón':'buzon','📞 Contacto':'contacto'};
+      const ALIAS = {'🕒 Horarios':'horarios','💲 Tarifas':'tarifa','🎓 Tarifa preferencial':'preferencial','🎯 Misión y visión':'mision','📮 Buzón':'buzon','📞 Contacto':'contacto','❓ Preguntas frecuentes':'preguntas frecuentes'};
+      const faqSel = FAQ.find(f => f.p === texto);
+      if (faqSel) { if (faqSel.go) setTimeout(() => document.getElementById(faqSel.go).scrollIntoView({behavior:'smooth'}), 700); return bot(faqSel.r + opts(['❓ Preguntas frecuentes','🎯 Misión y visión'])); }
       const q = norm(ALIAS[texto] || texto);
       const tiene = (...k) => k.some(x => q.includes(x));
       const rutas = rutasDesdePagina();
 
+      if (tiene('preguntas frecuentes','frecuentes','faq','ayuda','dudas'))
+        return bot('❓ <b>Preguntas frecuentes</b>. Toca una:' + opts(FAQ.map(f => f.p)));
+      const enFrase = k => (' ' + q + ' ').includes(' ' + k + ' ') || (k.length > 5 && q.includes(k));
+      const faqHit = FAQ.find(f => f.k.some(enFrase));
+      if (faqHit) { if (faqHit.go) setTimeout(() => document.getElementById(faqHit.go).scrollIntoView({behavior:'smooth'}), 700); return bot(faqHit.r + opts(['❓ Preguntas frecuentes'])); }
       if (tiene('hola','buenas','buenos','saludos','hey') && q.split(' ').length <= 3)
         return bot('¡Hola! 😊 ¿En qué te ayudo hoy?' + opts(MENU));
       if (tiene('gracias','chevere','excelente','genial'))
         return bot('¡Con gusto! 💛 Gracias por viajar con Marco Polo. ¿Algo más?' + opts(MENU));
       if (tiene('preferencial','descuento','estudiante','tercera edad','adulto mayor','discapacidad','medio pasaje','50'))
-        return bot('🎓 <b>Tarifa preferencial (50% de descuento)</b> para:<br>• Estudiantes<br>• Adultos mayores<br>• Personas con discapacidad<br><small>Presenta tu cédula o carné al abordar.</small>');
+        return bot('🎓 <b>Tarifa preferencial (50% del pasaje normal)</b> para:<br>• Estudiantes<br>• Niñas, niños y adolescentes<br>• Adultos mayores<br>• Personas con discapacidad<br><small>Presenta tu cédula o carné al abordar. Resolución 020-DIR-2026-ANT.</small>');
       if (tiene('tarifa','precio','pasaje','cuanto','cuesta','valor','vale','cobran'))
         return responderTarifa(texto);
       if (/\s(a|hasta|hacia)\s/.test(' ' + q + ' ') && !tiene('horario','hora','salida','sale','turno'))
@@ -1115,11 +1186,11 @@
         return bot('🎯 <b>Misión:</b> ' + document.querySelector('.mv-card.mision p').textContent + '<br><br>🔭 <b>Visión 2030:</b> ' + document.querySelector('.mv-card.vision p').textContent);
       if (tiene('sugerencia','queja','reclamo','felicit','buzon','perdido','perdi','olvide','denuncia'))
         { setTimeout(() => document.getElementById('buzon').scrollIntoView({behavior:'smooth'}), 700);
-          return bot('📮 Te llevo al <b>Buzón de sugerencias y denuncias</b>. Cada mensaje recibe un número de caso. Las denuncias se atienden de <b>06:00 a 18:00, los 365 días</b>. En emergencias llama al ECU 911.'); }
+          return bot('📮 Te llevo al <b>Buzón de sugerencias y denuncias</b>. Tu caso llega a nuestro WhatsApp y al correo institucional, recibe un número de caso y <b>te respondemos en máximo 48 horas</b>. En emergencias llama al ECU 911.'); }
       if (tiene('boleto','comprar','reserv','encomienda','anticip'))
         return bot('📲 Anticipa tu viaje en nuestro WhatsApp <b>0979 212 249</b>: <a href="' + WA + '?text=' + encodeURIComponent('Hola Marco Polo, quiero anticipar mi viaje.') + '" target="_blank" rel="noopener">Abrir WhatsApp</a>');
       if (tiene('contacto','telefono','whatsapp','llamar','direccion','oficina','ubicacion','donde','sede','llegar','mapa'))
-        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 0979 212 249</a><br>📍 <b>Oficina:</b> Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí.<br><a href="'+MAPS+'" target="_blank" rel="noopener">🗺️ Cómo llegar</a>');
+        return bot('📞 <b>WhatsApp:</b> <a href="' + WA + '" target="_blank" rel="noopener">+593 0979 212 249</a><br>✉️ <b>Correo:</b> <a href="mailto:' + MAIL + '">' + MAIL + '</a><br>📍 <b>Oficina:</b> Calle Antonio Tandazo, sector Cashapamba, lote 13, Sangolquí.<br><a href="'+MAPS+'" target="_blank" rel="noopener">🗺️ Cómo llegar</a>');
       if (tiene('wifi','internet'))
         return bot('Por el momento nuestras unidades no cuentan con Wi‑Fi a bordo. ¿Te ayudo con algo más?' + opts(MENU));
       if (tiene('equipo','socio','conductor','chofer','directiv','gerente','presidente'))
@@ -1168,6 +1239,44 @@
       .then(function(r){ if (!r.ok) throw 0; return r.json(); })
       .then(function(j){ try { sessionStorage.setItem('mpVisita', '1'); } catch (e) {} pintar(j.value); })
       .catch(function(){ document.getElementById('visSub').textContent = 'Gracias por visitarnos.'; });
+  })();
+  </script>
+
+  <script>
+  /* ---- Estadísticas del buzón ---- */
+  const ABACUS = 'https://abacus.jasoncameron.dev/', NSB = 'cooperativamarcopolo-buzon';
+  const TIPOS = {'Sugerencia':'sugerencia','Queja o reclamo':'queja','Denuncia':'denuncia','Felicitación':'felicitacion','Objeto perdido':'objeto'};
+  function contarCaso(t){ try { fetch(ABACUS + 'hit/' + NSB + '/total'); if (TIPOS[t]) fetch(ABACUS + 'hit/' + NSB + '/' + TIPOS[t]); } catch (e) {} }
+  (function(){
+    const $ = id => document.getElementById(id);
+    const filas = (el, obj) => {
+      const ent = Object.entries(obj).filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]);
+      if (!ent.length) { el.innerHTML = '<p class="es-empty">Aún no hay casos registrados.</p>'; return; }
+      const max = Math.max(...ent.map(e => e[1]));
+      el.innerHTML = ent.map(([k,v]) => `<div class="es-row"><span>${k}</span><div class="tr"><i style="width:${Math.round(v/max*100)}%"></i></div><b>${v}</b></div>`).join('');
+    };
+    const get = k => fetch(ABACUS + 'get/' + NSB + '/' + k).then(r => r.ok ? r.json() : {value:0}).then(j => Number(j.value)||0).catch(() => null);
+    Promise.all([get('total'), ...Object.values(TIPOS).map(get)]).then(([tot, ...vals]) => {
+      $('esRec').textContent = tot === null ? '—' : tot.toLocaleString('es-EC');
+      const porTipo = {}; Object.keys(TIPOS).forEach((k,i) => { if (vals[i]) porTipo[k] = vals[i]; });
+      filas($('esTipos'), porTipo);
+    });
+    fetch('buzon/estadisticas.json', {cache:'no-store'}).then(r => r.json()).then(d => {
+      const casos = d.casos || [], H = 36e5, ahora = Date.now();
+      const resp = casos.filter(c => c.respondido), pend = casos.filter(c => !c.respondido);
+      const horas = resp.map(c => (new Date(c.respondido) - new Date(c.recibido)) / H).filter(h => h >= 0);
+      const dentro = horas.filter(h => h <= 48).length;
+      $('esAte').textContent = resp.length;
+      if (d.actualizado) $('esCorte').textContent = 'corte: ' + new Date(d.actualizado + 'T12:00').toLocaleDateString('es-EC',{day:'numeric',month:'long',year:'numeric'});
+      $('esProm').textContent = horas.length ? (horas.reduce((a,b)=>a+b,0)/horas.length).toFixed(1).replace('.',',') + ' h' : '—';
+      const pct = horas.length ? Math.round(dentro/horas.length*100) : null;
+      $('esPct').textContent = pct === null ? '—' : pct + ' %'; if (pct !== null) $('esPctBar').style.width = pct + '%';
+      $('esPen').textContent = pend.length;
+      const venc = pend.filter(c => (ahora - new Date(c.recibido)) / H > 48).length;
+      $('esVenc').textContent = pend.length ? (venc ? venc + ' con más de 48 h' : 'todos dentro del plazo') : 'sin casos pendientes';
+      const porRuta = {}; casos.forEach(c => { const r = (c.ruta || 'Sin ruta').split(' · ')[0]; porRuta[r] = (porRuta[r]||0) + 1; });
+      filas($('esRutas'), porRuta);
+    }).catch(() => { $('esRutas').innerHTML = '<p class="es-empty">Estadística no disponible por el momento.</p>'; });
   })();
   </script>
 </body>
