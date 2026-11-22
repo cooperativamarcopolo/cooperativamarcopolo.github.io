@@ -5,64 +5,129 @@
 <style>
 body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;background:#f4f8fd;color:#0b2545}
 header{background:linear-gradient(135deg,#003d82,#0079d8);color:#fff;padding:18px 22px}header h1{margin:0;font-size:1.3rem}header p{margin:4px 0 0;opacity:.9;font-size:.9rem}
-main{max-width:1100px;margin:0 auto;padding:18px}
+main{max-width:1200px;margin:0 auto;padding:18px}
 .card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,40,100,.08);margin-bottom:16px}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.card h2{margin:0 0 10px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 label{font-size:.8rem;font-weight:700;color:#5a6b85;display:grid;gap:4px}
-input,select{padding:8px;border:1px solid #c9d6e8;border-radius:9px;font:inherit}
-button{background:#0057b8;color:#fff;border:0;border-radius:10px;padding:9px 14px;font-weight:700;cursor:pointer}button.sec{background:#e6eef9;color:#0b2545}button.ok{background:#16a34a}
-table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:7px;border-bottom:1px solid #e3eaf4;text-align:left}th{background:#eef3fa}
-.tag{padding:2px 8px;border-radius:9px;font-weight:700;font-size:.78rem}.v{background:#dcfce7;color:#166534}.r{background:#fee2e2;color:#991b1b}.a{background:#fef3c7;color:#92400e}
+input,select,textarea{padding:8px;border:1px solid #c9d6e8;border-radius:9px;font:inherit}
+textarea{min-height:54px}
+button{background:#0057b8;color:#fff;border:0;border-radius:10px;padding:8px 13px;font-weight:700;cursor:pointer;margin:2px}button.sec{background:#e6eef9;color:#0b2545}button.ok{background:#16a34a}button.wa{background:#25d366}
+table{width:100%;border-collapse:collapse;font-size:.86rem}th,td{padding:6px;border-bottom:1px solid #e3eaf4;text-align:left;vertical-align:top}th{background:#eef3fa}
+td.n,th.n{text-align:center}
+.tag{padding:2px 8px;border-radius:9px;font-weight:700;font-size:.78rem;white-space:nowrap}.v{background:#dcfce7;color:#166534}.r{background:#fee2e2;color:#991b1b}.a{background:#fef3c7;color:#92400e}
 .kpis{display:flex;gap:12px;flex-wrap:wrap}.kpis div{background:#eef3fa;border-radius:12px;padding:10px 14px;font-weight:700}.kpis b{display:block;font-size:1.4rem}
-ol{font-size:.9rem;line-height:1.5}
+.priv{background:#fff7e6;border:1px solid #f5d38a;border-radius:12px;padding:10px 12px;font-size:.86rem}
+ol{font-size:.9rem;line-height:1.5}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.top1{background:#fff1f1}.fel{background:#effaf3}
 @media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}
-</style></head><body>
-<header><h1>Gestión del buzón · Registro de casos y tiempos de respuesta</h1><p>Uso interno de la oficina de atención al usuario. Meta: respuesta en máximo 48 horas.</p></header>
+</style>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head><body>
+<header><h1>Gestión del buzón · Casos, tiempos de respuesta y reporte mensual por unidad</h1><p>Uso interno de la oficina de atención al usuario. Meta: respuesta en máximo 48 horas.</p></header>
 <main>
 <div class="card"><b>Cómo se usa</b><ol>
-<li>Cuando llegue un caso por WhatsApp o correo, regístralo aquí con su número de caso (folio), tipo, ruta y fecha y hora de recepción.</li>
-<li>Cuando se responda al usuario, presiona <b>Marcar respondido</b>: se guarda la fecha y hora de respuesta.</li>
-<li>Al final del día (o de la semana), presiona <b>Descargar estadisticas.json</b> y súbelo al repositorio de la página, en la carpeta <code>buzon/</code>, reemplazando el anterior. La sección Estadísticas de la web se actualiza sola.</li>
-</ol><small>Los datos de esta pantalla se guardan en este navegador. Siempre descarga el archivo para no perderlos.</small></div>
+<li>Registra cada caso que llegue por WhatsApp o correo: número de caso, tipo, ruta, unidad, fecha y hora.</li>
+<li>Para avisar al socio de la unidad, carga una vez en esta computadora el archivo de socios (Excel con columnas <i>discos</i>, <i>nombre</i> y <i>whatsapp</i>) y usa <b>Avisar al socio</b>. El aviso <b>no incluye</b> el nombre ni el celular de quien reclamó.</li>
+<li>Cuando respondas al usuario, presiona <b>Marcar respondido</b>.</li>
+<li>Para la web, presiona <b>Descargar estadisticas.json</b> y súbelo a la carpeta <code>buzon/</code> del sitio. Ese archivo <b>no lleva</b> unidades, socios ni resúmenes: solo tipo, ruta y fechas.</li>
+<li>El <b>reporte mensual por unidad</b> se descarga en Excel para Gerencia y el Consejo; no se publica.</li>
+</ol>
+<div class="priv">🔒 Los casos y el archivo de socios se guardan <b>solo en este navegador</b>; nada de eso se sube a internet. Descarga respaldos en Excel con frecuencia.</div></div>
+
+<div class="card"><h2>Archivo de socios (solo en esta computadora)</h2>
+<div class="row"><input type="file" id="fs" accept=".xlsx,.xls,.csv"> <span id="fsSt"></span> <button class="sec" id="fsDel">Quitar archivo de socios</button></div></div>
+
 <div class="card"><div class="kpis" id="k"></div></div>
-<div class="card"><div class="grid">
-<label>Número de caso<input id="f" placeholder="MP-SUG-261122-0930xx"></label>
+
+<div class="card"><h2>Registrar caso</h2><div class="grid">
+<label>Número de caso<input id="f" placeholder="MP-QUE-261122-0930xx"></label>
 <label>Tipo<select id="t"><option>Sugerencia</option><option>Queja o reclamo</option><option>Denuncia</option><option>Felicitación</option><option>Objeto perdido</option></select></label>
-<label>Ruta<select id="ru"><option>Ruta A · Loreto – Sangolquí – La Marín</option><option>Ruta B · Jatumpungo – Sangolquí – La Marín</option><option>Ruta C · San Fernando – Sangolquí – La Marín</option><option>Ruta D · Sangolquí – Pifo – Cusubamba</option><option>Sin ruta</option></select></label>
+<label>Ruta<select id="ru"><option>Ruta A · Loreto – Sangolquí – La Marín</option><option>Ruta B · Jatumpungo – Sangolquí – La Marín</option><option>Ruta C · San Fernando – Sangolquí – La Marín</option><option>Ruta D · Sangolquí – Pifo – El Quinche – Cusubamba</option><option>Sin ruta</option></select></label>
+<label>Unidad<select id="un"></select></label>
+<label>Fecha y hora del hecho<input id="fh" type="datetime-local"></label>
 <label>Recibido<input id="re" type="datetime-local"></label>
 <label>Canal<select id="c"><option>Página web</option><option>WhatsApp</option><option>Correo</option><option>Oficina</option></select></label>
-</div><p><button id="add">➕ Registrar caso</button> <button class="sec" id="load">🔄 Cargar desde la web</button> <button class="ok" id="dl">⬇️ Descargar estadisticas.json</button></p></div>
-<div class="card"><table><thead><tr><th>Caso</th><th>Tipo</th><th>Ruta</th><th>Recibido</th><th>Respondido</th><th>Horas</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+<label>Resumen para el socio (sin datos del usuario)<textarea id="rs" placeholder="Ej.: no respetó la parada en San Rafael"></textarea></label>
+</div><p><button id="add">➕ Registrar caso</button> <button class="sec" id="load">🔄 Cargar casos desde la web</button></p></div>
+
+<div class="card"><h2>Reporte mensual por unidad</h2>
+<div class="row"><label>Mes<input type="month" id="mes"></label> <button class="ok" id="xl">⬇️ Descargar reporte en Excel</button></div>
+<div id="rep"></div></div>
+
+<div class="card"><h2>Casos registrados</h2>
+<table><thead><tr><th>Caso</th><th>Tipo</th><th>Ruta</th><th>Unidad</th><th>Recibido</th><th>Respondido</th><th>Horas</th><th>Acciones</th></tr></thead><tbody id="tb"></tbody></table>
+<p><button class="ok" id="dl">⬇️ Descargar estadisticas.json (para la web)</button> <button class="sec" id="bk">💾 Respaldo completo en Excel</button></p></div>
 </main>
 <script>
-const KEY='mpBuzonCasos', H=36e5;
+const KEY='mpBuzonCasos', KS='mpSociosLocal', H=36e5;
+const UNIDADES=[]; for(let i=1;i<=54;i++){ if([18,36,41].includes(i)) continue; UNIDADES.push('MP'+String(i).padStart(2,'0')); }
 let D; try{D=JSON.parse(localStorage.getItem(KEY))}catch(e){} D=D||{casos:[]};
+let SOC={}; try{SOC=JSON.parse(localStorage.getItem(KS))||{}}catch(e){}
 const $=id=>document.getElementById(id);
+const esc=t=>String(t??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const nowLocal=()=>{const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,16)};
-$('re').value=nowLocal();
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){} pintar()};
+$('un').innerHTML='<option value="">No indicada</option>'+UNIDADES.map(u=>`<option>${u}</option>`).join('');
+$('re').value=nowLocal(); $('mes').value=nowLocal().slice(0,7);
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){alert('No se pudo guardar en este navegador.')} pintar()};
 const fmt=x=>x?new Date(x).toLocaleString('es-EC',{dateStyle:'short',timeStyle:'short'}):'—';
+const normU=u=>{const m=String(u||'').toUpperCase().match(/(\d{1,3})/);return m?'MP'+String(+m[1]).padStart(2,'0'):''};
+function pintarSocios(){const n=Object.keys(SOC).length;$('fsSt').textContent=n?`✔ ${n} socios cargados en esta computadora`:'Sin archivo de socios cargado';}
+$('fs').onchange=async e=>{const file=e.target.files[0];if(!file)return;
+  if(typeof XLSX==='undefined')return alert('No se pudo cargar el lector de Excel. Revisa la conexión a internet.');
+  const wb=XLSX.read(await file.arrayBuffer());const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{defval:''});
+  const m={};rows.forEach(r=>{const k=Object.fromEntries(Object.entries(r).map(([a,b])=>[a.toLowerCase().trim(),b]));
+    const disco=normU(k.discos??k.disco??k['nºdisco']??k.unidad);const tel=String(k.whatsapp??k.celular??k.telefono??'').replace(/\D/g,'');
+    if(disco)m[disco]={nombre:String(k.nombre??k['nombres y apellidos']??'').trim(),tel}});
+  SOC=m;try{localStorage.setItem(KS,JSON.stringify(SOC))}catch(x){}pintarSocios();e.target.value=''};
+$('fsDel').onclick=()=>{if(confirm('¿Quitar el archivo de socios de esta computadora?')){SOC={};localStorage.removeItem(KS);pintarSocios()}};
+function waSocio(c){const s=SOC[c.unidad];if(!s||!s.tel)return alert('No hay celular registrado para la unidad '+(c.unidad||'(sin unidad)')+'. Carga el archivo de socios.');
+  let tel=s.tel;if(tel.startsWith('0'))tel='593'+tel.slice(1);if(!tel.startsWith('593'))tel='593'+tel;
+  const fel=c.tipo==='Felicitación';
+  const txt=fel?`🌟 COOPERATIVA MARCO POLO · FELICITACIÓN\n\nEstimado/a socio/a ${s.nombre}:\nUn usuario felicitó el servicio de su unidad ${c.unidad}.\nCaso: ${c.folio}\nRuta: ${c.ruta}\nFecha del viaje: ${fmt(c.hecho)}\n${c.resumen?'Detalle: '+c.resumen+'\n':''}\n¡Gracias por su compromiso con el buen servicio!\nGerencia`
+   :`📮 COOPERATIVA MARCO POLO · AVISO DE CASO\n\nEstimado/a socio/a ${s.nombre}:\nSe registró un caso relacionado con su unidad ${c.unidad}.\nCaso: ${c.folio}\nTipo: ${c.tipo}\nRuta: ${c.ruta}\nFecha y hora del hecho: ${fmt(c.hecho)}\n${c.resumen?'Resumen: '+c.resumen+'\n':''}\nPor favor, presente su descargo en Gerencia en un plazo de 48 horas. Este aviso es reservado; los datos del usuario se mantienen en confidencialidad.\nGerencia`;
+  c.avisado=nowLocal();save();window.open('https://wa.me/'+tel+'?text='+encodeURIComponent(txt),'_blank')}
 function pintar(){
-  const tb=$('tb'); tb.innerHTML='';
+  const tb=$('tb');tb.innerHTML='';
   D.casos.slice().reverse().forEach(c=>{
     const h=((c.respondido?new Date(c.respondido):new Date())-new Date(c.recibido))/H;
     const cls=c.respondido?(h<=48?'v':'r'):(h>48?'r':'a');
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td>${c.folio}</td><td>${c.tipo}</td><td>${(c.ruta||'').split(' · ')[0]}</td><td>${fmt(c.recibido)}</td><td>${fmt(c.respondido)}</td><td><span class="tag ${cls}">${h.toFixed(1)} h${c.respondido?'':' (abierto)'}</span></td><td></td>`;
+    tr.innerHTML=`<td>${esc(c.folio)}</td><td>${esc(c.tipo)}</td><td>${esc((c.ruta||'').split(' · ')[0])}</td><td>${esc(c.unidad||'—')}</td><td>${fmt(c.recibido)}</td><td>${fmt(c.respondido)}</td><td><span class="tag ${cls}">${h.toFixed(1)} h${c.respondido?'':' (abierto)'}</span></td><td></td>`;
     const td=tr.lastChild;
     if(!c.respondido){const b=document.createElement('button');b.textContent='Marcar respondido';b.onclick=()=>{c.respondido=nowLocal();save()};td.append(b)}
-    const x=document.createElement('button');x.className='sec';x.textContent='🗑';x.title='Eliminar';x.onclick=()=>{if(confirm('¿Eliminar el caso '+c.folio+'?')){D.casos.splice(D.casos.indexOf(c),1);save()}};td.append(' ',x);
+    if(c.unidad){const w=document.createElement('button');w.className='wa';w.textContent=c.avisado?'Avisado ✔ (reenviar)':'Avisar al socio';w.onclick=()=>waSocio(c);td.append(w)}
+    const x=document.createElement('button');x.className='sec';x.textContent='🗑';x.title='Eliminar';x.onclick=()=>{if(confirm('¿Eliminar el caso '+c.folio+'?')){D.casos.splice(D.casos.indexOf(c),1);save()}};td.append(x);
     tb.append(tr)});
-  const r=D.casos.filter(c=>c.respondido), hs=r.map(c=>(new Date(c.respondido)-new Date(c.recibido))/H);
-  const p=D.casos.filter(c=>!c.respondido);
+  const r=D.casos.filter(c=>c.respondido),hs=r.map(c=>(new Date(c.respondido)-new Date(c.recibido))/H),p=D.casos.filter(c=>!c.respondido);
   $('k').innerHTML=`<div>Registrados<b>${D.casos.length}</b></div><div>Respondidos<b>${r.length}</b></div><div>Promedio<b>${hs.length?(hs.reduce((a,b)=>a+b,0)/hs.length).toFixed(1)+' h':'—'}</b></div><div>Dentro de 48 h<b>${hs.length?Math.round(hs.filter(h=>h<=48).length/hs.length*100)+' %':'—'}</b></div><div>Pendientes<b>${p.length}</b></div><div>Vencidos (+48 h)<b>${p.filter(c=>(Date.now()-new Date(c.recibido))/H>48).length}</b></div>`;
+  pintarSocios();reporte();
 }
+const TIPOS=['Queja o reclamo','Denuncia','Felicitación','Sugerencia','Objeto perdido'];
+function datosMes(){const m=$('mes').value;const cs=D.casos.filter(c=>(c.hecho||c.recibido||'').slice(0,7)===m&&c.unidad);
+  const t={};cs.forEach(c=>{t[c.unidad]=t[c.unidad]||Object.fromEntries(TIPOS.map(x=>[x,0]));t[c.unidad][c.tipo]=(t[c.unidad][c.tipo]||0)+1});
+  return Object.entries(t).map(([u,o])=>({u,socio:(SOC[u]||{}).nombre||'',...o,neg:o['Queja o reclamo']+o['Denuncia'],tot:TIPOS.reduce((a,x)=>a+o[x],0)})).sort((a,b)=>b.neg-a.neg||b.tot-a.tot)}
+function reporte(){const rows=datosMes();
+  if(!rows.length){$('rep').innerHTML='<p>No hay casos con unidad registrados en este mes.</p>';return}
+  const topQ=[...rows].sort((a,b)=>b['Queja o reclamo']-a['Queja o reclamo'])[0],topD=[...rows].sort((a,b)=>b['Denuncia']-a['Denuncia'])[0],topF=[...rows].sort((a,b)=>b['Felicitación']-a['Felicitación'])[0];
+  const res=`<div class="kpis" style="margin:8px 0">${topQ['Queja o reclamo']?`<div>Más quejas<b>${topQ.u} (${topQ['Queja o reclamo']})</b></div>`:''}${topD['Denuncia']?`<div>Más denuncias<b>${topD.u} (${topD['Denuncia']})</b></div>`:''}${topF['Felicitación']?`<div>Más felicitaciones<b>${topF.u} (${topF['Felicitación']})</b></div>`:''}</div>`;
+  $('rep').innerHTML=res+`<table><thead><tr><th>Unidad</th><th>Socio</th>${TIPOS.map(x=>`<th class="n">${x}</th>`).join('')}<th class="n">Total</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.neg&&r.neg===rows[0].neg?'top1':(r['Felicitación']&&!r.neg?'fel':'')}"><td>${r.u}</td><td>${esc(r.socio)}</td>${TIPOS.map(x=>`<td class="n">${r[x]||''}</td>`).join('')}<td class="n"><b>${r.tot}</b></td></tr>`).join('')}</tbody></table>`}
+$('mes').onchange=reporte;
+$('xl').onclick=()=>{if(typeof XLSX==='undefined')return alert('No se pudo cargar el generador de Excel.');const rows=datosMes();
+  const aoa=[['COOPERATIVA DE TRANSPORTE MARCO POLO · Reporte del buzón por unidad · '+$('mes').value],[],['Unidad','Socio',...TIPOS,'Total']];rows.forEach(r=>aoa.push([r.u,r.socio,...TIPOS.map(x=>r[x]),r.tot]));
+  const ws=XLSX.utils.aoa_to_sheet(aoa);ws['!cols']=[{wch:9},{wch:36},...TIPOS.map(()=>({wch:15})),{wch:8}];
+  const det=[['Caso','Tipo','Ruta','Unidad','Fecha del hecho','Recibido','Respondido','Horas','Aviso al socio','Resumen']];
+  D.casos.filter(c=>(c.hecho||c.recibido||'').slice(0,7)===$('mes').value).forEach(c=>det.push([c.folio,c.tipo,c.ruta,c.unidad||'',fmt(c.hecho),fmt(c.recibido),fmt(c.respondido),c.respondido?+(((new Date(c.respondido)-new Date(c.recibido))/H).toFixed(1)):'',c.avisado?fmt(c.avisado):'',c.resumen||'']));
+  const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Por unidad');XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(det),'Casos del mes');
+  XLSX.writeFile(wb,'Reporte_Buzon_Unidades_'+$('mes').value+'.xlsx')};
+$('bk').onclick=()=>{if(typeof XLSX==='undefined')return alert('No se pudo cargar el generador de Excel.');const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(D.casos),'Casos');XLSX.writeFile(wb,'Respaldo_Buzon_Marco_Polo_'+nowLocal().slice(0,10)+'.xlsx')};
 $('add').onclick=()=>{const f=$('f').value.trim()||('MP-OFI-'+Date.now().toString().slice(-6));
   if(D.casos.some(c=>c.folio===f))return alert('Ese número de caso ya está registrado.');
-  D.casos.push({folio:f,tipo:$('t').value,ruta:$('ru').value,canal:$('c').value,recibido:$('re').value,respondido:null});$('f').value='';$('re').value=nowLocal();save()};
-$('load').onclick=()=>fetch('estadisticas.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{
-  const ya=new Set(D.casos.map(c=>c.folio)); let n=0;(j.casos||[]).forEach(c=>{if(!ya.has(c.folio)){D.casos.push(c);n++}}); save(); alert(n+' casos cargados desde la web.')}).catch(()=>alert('No se pudo leer el archivo de la web.'));
-$('dl').onclick=()=>{const o={actualizado:new Date().toISOString().slice(0,10),nota:'Registro de casos del buzón Marco Polo. Generado desde buzon/gestion.html.',casos:D.casos};
+  D.casos.push({folio:f,tipo:$('t').value,ruta:$('ru').value,unidad:$('un').value,hecho:$('fh').value||null,canal:$('c').value,recibido:$('re').value,respondido:null,resumen:$('rs').value.trim(),avisado:null});
+  ['f','fh','rs'].forEach(i=>$(i).value='');$('un').value='';$('re').value=nowLocal();save()};
+$('load').onclick=()=>fetch('estadisticas.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{const ya=new Set(D.casos.map(c=>c.folio));let n=0;(j.casos||[]).forEach(c=>{if(!ya.has(c.folio)){D.casos.push(c);n++}});save();alert(n+' casos cargados desde la web.')}).catch(()=>alert('No se pudo leer el archivo de la web.'));
+$('dl').onclick=()=>{const pub=D.casos.map(c=>({folio:c.folio,tipo:c.tipo,ruta:c.ruta,recibido:c.recibido,respondido:c.respondido}));
+  const o={actualizado:new Date().toISOString().slice(0,10),nota:'Registro público del buzón Marco Polo: solo tipo, ruta y tiempos. Sin unidades ni datos personales.',casos:pub};
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(o,null,2)],{type:'application/json'}));a.download='estadisticas.json';a.click()};
 pintar();
 </script></body></html>
